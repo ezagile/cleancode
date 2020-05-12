@@ -1,4 +1,4 @@
-# Welcome to MkDocs
+# Agile Programming
 
 참고: [mkdocs.org](https://www.mkdocs.org).
 
@@ -8,7 +8,13 @@
 * `mkdocs serve` - live-reloading 서버 시작
 * `mkdocs build` - 문서 생성
 * `mkdocs -h` - 도움말 출력
-* `mkdocs gh-deploy 
+
+## 작업 순서
+
+* `mkdocs gh-deploy`
+* `git add .`
+* `git commit -m "코멘트"`
+* `git push`
 
 ## Project layout
 
