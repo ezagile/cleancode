@@ -1,0 +1,16 @@
+site_name: ezagile
+
+theme: readthedocs
+
+nav:
+    - Home: index.md
+    - CleanCode: ccode.md
+    - Mgmt.: sitemgmt.md
+    
+    
+markdown_extensions:
+    - footnotes
+    - admonition
+    - meta
+    - toc:
+        permalink: true
