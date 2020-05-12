@@ -1,6 +1,7 @@
 site_name: ezagile
 
-theme: readthedocs
+theme:
+    name: material
 
 nav:
     - Home: index.md
