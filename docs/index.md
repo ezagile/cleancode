@@ -1,13 +1,14 @@
 # Welcome to MkDocs
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+참고: [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+## 명령어
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+* `mkdocs new [dir-name]` - 새 프로젝트 생성
+* `mkdocs serve` - live-reloading 서버 시작
+* `mkdocs build` - 문서 생성
+* `mkdocs -h` - 도움말 출력
+* `mkdocs gh-deploy 
 
 ## Project layout
 
