@@ -4,9 +4,9 @@ theme:
     name: material
 
 nav:
-    - Home: index.md
     - CleanCode: ccode.md
     - Mgmt.: sitemgmt.md
+    - Home: index.md
     
     
 markdown_extensions:
