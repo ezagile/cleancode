@@ -1,17 +1,60 @@
 site_name: ezagile
 
+copyright: Copyright &copy; 2020 JongYun Jung
+
 theme:
     name: material
 
+    features:
+        - tabs
+
 nav:
-    - CleanCode: ccode.md
+    - Clean Code: 
+        - '소개': ccode.md
+        - '의미있는 이름': cleancode/meaningful_name.md
+        - '함수': cleancode/functions.md
+        - '주석': cleancode/comments.md
+        - '형식': cleancode/formatting.md
+        - '객체와 자료구조': cleancode/objects_data_structure.md
+        - '경계': cleancode/boundaries.md
+        - '에러 처리': cleancode/error_handling.md
     - Mgmt.: sitemgmt.md
     - Home: index.md
     
     
 markdown_extensions:
-    - footnotes
-    - admonition
-    - meta
-    - toc:
+    - markdown.extensions.admonition
+    - markdown.extensions.attr_list
+    - markdown.extensions.codehilite:
+        guess_lang: false
+    - markdown.extensions.def_list
+    - markdown.extensions.footnotes
+    - markdown.extensions.meta
+    - markdown.extensions.toc:
         permalink: true
+    - pymdownx.arithmatex
+    - pymdownx.betterem:
+        smart_enable: all
+    - pymdownx.caret
+    - pymdownx.critic
+    - pymdownx.details
+    - pymdownx.emoji:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    # - pymdownx.highlight:
+    #     linenums_style: pymdownx-inline
+    - pymdownx.inlinehilite
+    - pymdownx.keys
+    - pymdownx.magiclink:
+        repo_url_shorthand: true
+        user: squidfunk
+        repo: mkdocs-material
+    - pymdownx.mark
+    - pymdownx.smartsymbols
+    - pymdownx.snippets:
+        check_paths: true
+    - pymdownx.superfences
+    - pymdownx.tabbed
+    - pymdownx.tasklist:
+        custom_checkbox: true
+    - pymdownx.tilde
