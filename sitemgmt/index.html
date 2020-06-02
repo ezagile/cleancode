@@ -2,7 +2,7 @@
 
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="kr" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -15,12 +15,18 @@
     
     
       
-        <title>Mgmt. - ezagile</title>
+        <title>Mgmt. - ezAgile</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.4b9ffd7b.min.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/palette.b79bcd20.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
@@ -40,7 +46,9 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -59,7 +67,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="ezagile" class="md-header-nav__button md-logo" aria-label="ezagile">
+    <a href=".." title="ezAgile" class="md-header-nav__button md-logo" aria-label="ezAgile">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -72,7 +80,7 @@
       
         <div class="md-header-nav__ellipsis">
           <span class="md-header-nav__topic md-ellipsis">
-            ezagile
+            ezAgile
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
@@ -91,7 +99,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -130,6 +138,16 @@
     <ul class="md-tabs__list">
       
         
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link md-tabs__link--active">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
   
   
     <li class="md-tabs__item">
@@ -143,16 +161,19 @@
 
       
         
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../tdd/intro/" class="md-tabs__link">
+          TDD
+        </a>
+      
+    </li>
+  
+
       
         
-  <li class="md-tabs__item">
-    
-      <a href=".." class="md-tabs__link md-tabs__link--active">
-        Home
-      </a>
-    
-  </li>
-
       
     </ul>
   </div>
@@ -168,13 +189,13 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="ezagile" class="md-nav__button md-logo" aria-label="ezagile">
+    <a href=".." title="ezAgile" class="md-nav__button md-logo" aria-label="ezAgile">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
 
     </a>
-    ezagile
+    ezAgile
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -184,18 +205,30 @@
       
 
 
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
-    <label class="md-nav__link" for="nav-1">
+    <label class="md-nav__link" for="nav-2">
       Clean Code
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
       </span>
     </label>
     <nav class="md-nav" aria-label="Clean Code" data-md-level="1">
-      <label class="md-nav__title" for="nav-1">
+      <label class="md-nav__title" for="nav-2">
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
         </span>
@@ -309,6 +342,60 @@
       
       
 
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      TDD
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TDD" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        TDD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tdd/intro/" title="소개" class="md-nav__link">
+      소개
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tdd/junit/" title="JUnit" class="md-nav__link">
+      JUnit
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -329,7 +416,7 @@
     </a>
     
       
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="목차">
   
   
   
@@ -337,7 +424,7 @@
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </span>
-      Table of contents
+      목차
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
@@ -410,18 +497,6 @@
   </li>
 
     
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
   </ul>
 </nav>
                   </div>
@@ -433,7 +508,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="목차">
   
   
   
@@ -441,7 +516,7 @@
       <span class="md-nav__icon md-icon">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </span>
-      Table of contents
+      목차
     </label>
     <ul class="md-nav__list" data-md-scrollfix>
       
@@ -537,52 +612,73 @@
 <li>git 설정은 사용자 홈의 .gitconfig 파일에 저장.</li>
 <li>직접 편집하거나 config 명령어를 사용.</li>
 </ul>
-<p>$ git config --global user.name "&lt;사용자명&gt;"
-$ git config --global user.email "&lt;메일 주소&gt;"</p>
+<div class="highlight"><pre><span></span><code>$ git config --global user.name <span class="s2">&quot;&lt;사용자명&gt;&quot;</span>
+$ git config --global user.email <span class="s2">&quot;&lt;메일 주소&gt;&quot;</span>
+</code></pre></div>
+
 <h4 id="_2">저장소 만들기<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>특정 폴더를 Git의 저장소로 등록하려면, 해당 폴더로 이동하여 init 명령어를 수행.</p>
-<p>$ git init</p>
+<div class="highlight"><pre><span></span><code>$ git init
+</code></pre></div>
+
 <h4 id="_3">파일 커밋하기<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
 <p>새로운 파일을 작성하고 원격 저장소에 등록하기</p>
 <p>참고&gt; 폴더의 작업트리와 인덱스 상태를 확인하기.</p>
-<p>$ git status</p>
+<div class="highlight"><pre><span></span><code>$ git status
+</code></pre></div>
+
 <p>그러면, 추적 대상이 되지 않은 파일(untracked files)에 대한 내용을 볼 수 있다.</p>
 <ul>
-<li>파일을 인덱스에 등록하는 명령어는 add (staging))
-$ git add file..</li>
+<li>파일을 인덱스에 등록하는 명령어는 add (staging))</li>
 </ul>
+<div class="highlight"><pre><span></span><code>$ git add file..
+</code></pre></div>
+
 <p>현재 폴더의 모든 파일을 인덱스에 등록</p>
-<p>$ git add .</p>
+<div class="highlight"><pre><span></span><code>$ git add .
+</code></pre></div>
+
 <ul>
 <li>커밋 실행하기</li>
 </ul>
-<p>$ git commit -m "주석"</p>
+<div class="highlight"><pre><span></span><code>$ git commit -m <span class="s2">&quot;주석&quot;</span>
+</code></pre></div>
+
 <ul>
-<li>
-<p>변경 이력 확인하기
-$ git log</p>
-</li>
-<li>
-<p>GUI 도구 활용하기</p>
-</li>
+<li>변경 이력 확인하기</li>
 </ul>
-<p>$ gitk</p>
+<div class="highlight"><pre><span></span><code>$ git log
+</code></pre></div>
+
+<ul>
+<li>GUI 도구 활용하기</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ gitk
+</code></pre></div>
+
 <h4 id="push">원격 저장소에 push<a class="headerlink" href="#push" title="Permanent link">&para;</a></h4>
 <ul>
 <li>원격 저장소를 추가하려면, remote 명령어를 사용</li>
 </ul>
-<p>$ git remote add name url</p>
+<div class="highlight"><pre><span></span><code>$ git remote add name url
+</code></pre></div>
+
 <ul>
 <li>repository는 push 경로의 주소, refspec은 push 할 브랜치를 지정</li>
 </ul>
-<p>$ git push repository refspec</p>
+<div class="highlight"><pre><span></span><code>$ git push repository refspec
+</code></pre></div>
+
 <h4 id="_4">원격 저장소 복제<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <ul>
 <li>repository 는 원격 저장소의 URL, directory는 복제할 폴더명</li>
 </ul>
-<p>$ git clone repository directory</p>
+<div class="highlight"><pre><span></span><code>$ git clone repository directory
+</code></pre></div>
+
 <h4 id="pull">원격 저장소에서 pull<a class="headerlink" href="#pull" title="Permanent link">&para;</a></h4>
-<p>$ git pull repository refspec</p>
+<div class="highlight"><pre><span></span><code>$ git pull repository refspec
+</code></pre></div>
                 
               
               
@@ -601,34 +697,20 @@ $ git log</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../cleancode/error_handling/" title="에러 처리" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../tdd/junit/" title="JUnit" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
-                  Previous
+                  이전
                 </span>
-                에러 처리
+                JUnit
               </div>
             </div>
           </a>
         
-        
-          <a href=".." title="Home" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Home
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>
@@ -654,7 +736,7 @@ $ git log</p>
     </div>
     
       <script src="../assets/javascripts/vendor.a0c4167b.min.js"></script>
-      <script src="../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/bundle.fb26dd1d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c"}</script>
       
       <script>
         app = initialize({
