@@ -22,3 +22,24 @@
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+
+
+
+## Git에 배포하기
+
+> 웹문서를 생성하고 **git** 에 업로드한다.
+
+```sh
+$ mkdocs build
+$ mkdocs gh-deploy
+```
+
+> 로컬 저장소에 저장한다.
+
+```sh
+$ git add .
+$ git commit -m "코멘트"
+$git push
+```
+
+

@@ -1,14 +1,31 @@
-site_name: ezagile
+site_name: ezAgile
 
 copyright: Copyright &copy; 2020 JongYun Jung
 
 theme:
     name: material
 
+    language: kr
+
     features:
         - tabs
+    
+    search_button: false
+    
+    palette:
+        primary: indigo
+        accent: indigo
+
+    # font:
+    #     text: Ubuntu
+    #     code: Ubuntu Mono
+
+# plugins:
+#     - search
+    
 
 nav:
+    - Home: index.md
     - Clean Code: 
         - '소개': ccode.md
         - '의미있는 이름': cleancode/meaningful_name.md
@@ -18,8 +35,9 @@ nav:
         - '객체와 자료구조': cleancode/objects_data_structure.md
         - '경계': cleancode/boundaries.md
         - '에러 처리': cleancode/error_handling.md
+    - TDD:
+        - '소개': tdd/intro.md
     - Mgmt.: sitemgmt.md
-    - Home: index.md
     
     
 markdown_extensions:
