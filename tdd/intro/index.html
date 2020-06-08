@@ -499,6 +499,23 @@
                 
                 
                 <h1 id="tdd">TDD<a class="headerlink" href="#tdd" title="Permanent link">&para;</a></h1>
+<ul>
+<li>끝임없이 변하는 기업 환경에서 유일한 상수는 <mark>변화</mark> 이다<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. </li>
+<li>기업들은 이를 위해 <mark>에자일 소프트웨어 개발</mark>(agile software development)을 적용하고 있다.</li>
+<li><mark>TDD</mark>(Test-Driven Development) 는 에자일 소프트웨어 개발의 한가지 실천 방안이다.</li>
+<li>TDD는 실제 코드를 작성하기 전에 <mark>실패하는 테스트 케이스</mark> 를 작성한다.</li>
+<li>
+<p>소프트웨어 개발 프로젝트는 수 많은 <mark>불확실성들(uncertainties)</mark> 과 관련된다.</p>
+<ul>
+<li>새로운 기술의 도입</li>
+<li>지속적인 요구 사항 변경</li>
+<li>인력 이동</li>
+</ul>
+</li>
+<li>
+<p>TDD 는 2003년 Kent Beck 에 의해 다시 재조명되었다.</p>
+</li>
+</ul>
 <blockquote>
 <p>TDD를 잘 하려면..</p>
 </blockquote>
@@ -520,23 +537,32 @@
 
 <blockquote>
 <p>TDD의 단순한 규칙</p>
+</blockquote>
 <div class="codehilite"><pre><span></span><code>- 자동화된 테스트가 실패할 경우 새 코드를 작성한다.
 - 중복을 제거한다.
 </code></pre></div>
 
 
-</blockquote>
 <p>이 규칙이 개인 또는 집단 차원의 복잡한 행동 패턴을 만든다.
     - 매 결정 사항에 대해 피드백을 제공하는 실행 가능한 코드를 기반으로 (유기적) 설계를 한다.
     - 자동화된 테스트를 개인이 직접 작성
     - 개발 환경은 작은 변환에도 빠르게 반응해야 한다.
     - 응집도는 높고 결합도는 낮은 컴포넌트로 구성</p>
-<p>이 규칙에 의한 프로그래밍 순서 &rarr; 주문과도 같다.</p>
-<ol>
-<li>빨강 - 실패하는 작은 테스트를 작성</li>
-<li>초록 - 빠르게 테스트과 통과하도록 작성. 이를 위해 죄악을 행해도 된다.</li>
-<li>리팩토링 - 테스트 통과하도록 작성한 와중에 생겨난 중복을 제거한다.</li>
-</ol>
+<blockquote>
+<p>TDD 프로그래밍 순서<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> &rarr; 주문과도 같다.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>1. 빨강 : 실패하는 작은 테스트를 작성
+2. 초록 : 빠르게 테스트과 통과하도록 작성. 이를 위해 죄악을 행해도 된다.
+3. 리팩토링 : 테스트 통과하도록 작성한 와중에 생겨난 중복을 제거한다.
+</code></pre></div>
+
+
+<ul>
+<li>여기서, 알 수 있는 중요한 사실은 테스트는 당신의 <mark>시스템에 대한 이해</mark> 를 보여준다.</li>
+<li>테스트는 마지막(test-last approach)이 아니라 첫 번째(<mark>test-first approah</mark>)로 하는 것이다.</li>
+<li>TDD는 빠른 피드백을 제공한다.</li>
+<li>빠른 피드백은 소프트웨어 생산성에 매우 중요하다.</li>
+</ul>
 <h2 id="_1">용기<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>왜 이런식으로 작업해야 할까? </p>
 <blockquote>
@@ -558,6 +584,30 @@
 - 도움이되고 구체적인 피드백을 찾는다.
 - 자신의 안좋은 성격, 습관을 직접 해결한다.
 </code></pre></div>
+
+
+<blockquote>
+<p>TDD는 2가지 중요한 목적 달성에 기여한다.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>1. 회귀 오류 발견(detect regression errors)
+2. 심플한 시스템 디자인(keep system design simple)
+</code></pre></div>
+
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>S. Gulati, and R. Sharma, Java Unit Testing with JUnit 5: Test Driven Development with JUnit 5, 1<sup>st</sup> ed. edition. New York, NY: Apress, 2017.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>K. Beck, Test Driven Development: By Example, 1 edition. Boston: Addison-Wesley Professional, 2002.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>켄트 벡 저/김창준, 강규영 공역, 테스트 주도 개발, 인사이트.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
@@ -640,6 +690,8 @@
           }, typeof search !== "undefined" && search)
         })
       </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>
