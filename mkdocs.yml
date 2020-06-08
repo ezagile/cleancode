@@ -37,6 +37,7 @@ nav:
         - '에러 처리': cleancode/error_handling.md
     - TDD:
         - '소개': tdd/intro.md
+        - 'JUnit': tdd/junit.md
     - Mgmt.: sitemgmt.md
     
     
@@ -76,3 +77,6 @@ markdown_extensions:
     - pymdownx.tasklist:
         custom_checkbox: true
     - pymdownx.tilde
+    
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML    

@@ -55,6 +55,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#tdd" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -373,11 +378,58 @@
     
     <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        소개
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
     
     <a href="./" title="소개" class="md-nav__link md-nav__link--active">
       소개
     </a>
     
+      
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    용기
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../junit/" title="JUnit" class="md-nav__link">
+      JUnit
+    </a>
   </li>
 
         
@@ -405,6 +457,38 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    용기
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -414,9 +498,116 @@
                   
                 
                 
-                  <h1>소개</h1>
-                
-                
+                <h1 id="tdd">TDD<a class="headerlink" href="#tdd" title="Permanent link">&para;</a></h1>
+<ul>
+<li>끝임없이 변하는 기업 환경에서 유일한 상수는 <mark>변화</mark> 이다<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>. </li>
+<li>기업들은 이를 위해 <mark>에자일 소프트웨어 개발</mark>(agile software development)을 적용하고 있다.</li>
+<li><mark>TDD</mark>(Test-Driven Development) 는 에자일 소프트웨어 개발의 한가지 실천 방안이다.</li>
+<li>TDD는 실제 코드를 작성하기 전에 <mark>실패하는 테스트 케이스</mark> 를 작성한다.</li>
+<li>
+<p>소프트웨어 개발 프로젝트는 수 많은 <mark>불확실성들(uncertainties)</mark> 과 관련된다.</p>
+<ul>
+<li>새로운 기술의 도입</li>
+<li>지속적인 요구 사항 변경</li>
+<li>인력 이동</li>
+</ul>
+</li>
+<li>
+<p>TDD 는 2003년 Kent Beck 에 의해 다시 재조명되었다.</p>
+</li>
+</ul>
+<blockquote>
+<p>TDD를 잘 하려면..</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>가능하면 테스트 우선으로 작업한다.
+    - 코드를  어떻게 테스트 할지 알아내기까지의 노력이 필요하다.
+    - 테스트를 작성하는데 드는 시간은 필요한 낭비이다.
+</code></pre></div>
+
+
+<blockquote>
+<p>동작하는 클린 코드 (clean code to work - Ron Jeffries) &rarr; TDD의 궁극적 목표</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>- 예측 가능한 개발 방법이다. 지속적으로 발생가능한 버그에 대해 걱정하지 않고, 일의 종료 시점을 알 수 있다.
+- 더 나은 코드에 대한 여지를 제공
+- 동료들 사이의 존경과 신뢰
+- 소프트웨어 품질 향상, 사용자의 만족도 향상
+</code></pre></div>
+
+
+<blockquote>
+<p>TDD의 단순한 규칙</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>- 자동화된 테스트가 실패할 경우 새 코드를 작성한다.
+- 중복을 제거한다.
+</code></pre></div>
+
+
+<p>이 규칙이 개인 또는 집단 차원의 복잡한 행동 패턴을 만든다.
+    - 매 결정 사항에 대해 피드백을 제공하는 실행 가능한 코드를 기반으로 (유기적) 설계를 한다.
+    - 자동화된 테스트를 개인이 직접 작성
+    - 개발 환경은 작은 변환에도 빠르게 반응해야 한다.
+    - 응집도는 높고 결합도는 낮은 컴포넌트로 구성</p>
+<blockquote>
+<p>TDD 프로그래밍 순서<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> &rarr; 주문과도 같다.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>1. 빨강 : 실패하는 작은 테스트를 작성
+2. 초록 : 빠르게 테스트과 통과하도록 작성. 이를 위해 죄악을 행해도 된다.
+3. 리팩토링 : 테스트 통과하도록 작성한 와중에 생겨난 중복을 제거한다.
+</code></pre></div>
+
+
+<ul>
+<li>여기서, 알 수 있는 중요한 사실은 테스트는 당신의 <mark>시스템에 대한 이해</mark> 를 보여준다.</li>
+<li>테스트는 마지막(test-last approach)이 아니라 첫 번째(<mark>test-first approah</mark>)로 하는 것이다.</li>
+<li>TDD는 빠른 피드백을 제공한다.</li>
+<li>빠른 피드백은 소프트웨어 생산성에 매우 중요하다.</li>
+</ul>
+<h2 id="_1">용기<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>왜 이런식으로 작업해야 할까? </p>
+<blockquote>
+<p>두려움</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>- 어려운 문제에 대해 시작 단계에서 부터 어떻게 끝날지 알 수 없다.
+- 두려움은 당신들을 망설이게 한다.
+- 두려움은 당신들의 소통을 방해한다.
+- 두려움은 당신들이 피드백을 받는 것을 기피하게 한다.
+- 두려움은 당신들을 까다롭게 만든다.
+</code></pre></div>
+
+
+<blockquote>
+<p>어떻게 할까?</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>- 불확실한 상황 대신, 가능한 재빨리 구체적인 학습을 시작한다.
+- 침묵 대신, 보다 분명하게 소통한다.
+- 도움이되고 구체적인 피드백을 찾는다.
+- 자신의 안좋은 성격, 습관을 직접 해결한다.
+</code></pre></div>
+
+
+<blockquote>
+<p>TDD는 2가지 중요한 목적 달성에 기여한다.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>1. 회귀 오류 발견(detect regression errors)
+2. 심플한 시스템 디자인(keep system design simple)
+</code></pre></div>
+
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>S. Gulati, and R. Sharma, Java Unit Testing with JUnit 5: Test Driven Development with JUnit 5, 1<sup>st</sup> ed. edition. New York, NY: Apress, 2017.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>K. Beck, Test Driven Development: By Example, 1 edition. Boston: Addison-Wesley Professional, 2002.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>켄트 벡 저/김창준, 강규영 공역, 테스트 주도 개발, 인사이트.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
@@ -450,13 +641,13 @@
           </a>
         
         
-          <a href="../../sitemgmt/" title="Mgmt." class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../junit/" title="JUnit" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   다음
                 </span>
-                Mgmt.
+                JUnit
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -499,6 +690,8 @@
           }, typeof search !== "undefined" && search)
         })
       </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>
