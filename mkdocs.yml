@@ -10,11 +10,11 @@ theme:
     features:
         - tabs
     
-    search_button: false
+    search_button: true
     
     palette:
         primary: indigo
-        accent: indigo
+        accent: red
 
     # font:
     #     text: Ubuntu
@@ -22,7 +22,9 @@ theme:
 
 # plugins:
 #     - search
+        
     
+
 
 nav:
     - Home: index.md
@@ -38,6 +40,8 @@ nav:
     - TDD:
         - '소개': tdd/intro.md
         - 'JUnit': tdd/junit.md
+    - JAVA:
+        - 'New in Java': effjava/intro.md
     - Mgmt.: sitemgmt.md
     
     
