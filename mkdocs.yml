@@ -4,6 +4,7 @@ copyright: Copyright &copy; 2020 JongYun Jung
 
 theme:
     name: material
+    #name: readthedocs    
 
     language: kr
 
@@ -23,7 +24,7 @@ theme:
 # plugins:
 #     - search
         
-    
+  
 
 
 nav:
@@ -40,8 +41,15 @@ nav:
     - TDD:
         - '소개': tdd/intro.md
         - 'JUnit': tdd/junit.md
+        - 'JUnit5':
+            - 'Intellij': tdd/junit5_intellij.md
+            - 'Eclipse': tdd/junit5_eclipse.md
+        - 'Googletest':
+            - 'Visual Studio 2017': tdd/gtest_vstudio.md
     - JAVA:
         - 'New in Java': effjava/intro.md
+    - Etc:
+        - '용어': etc/terms.md
     - Mgmt.: sitemgmt.md
     
     
