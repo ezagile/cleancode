@@ -153,3 +153,33 @@
 ![mvnprj1](./img/intellij_mvn5.png){: width="600" height="600"}
 
 
+## Git에 연동하기
+
+Intellij 에서 생성한 Maven 프로젝트를 Git으로 관리하기 위한 설정 방법이다.
+
+- Github에 Repository를 생성한다.
+
+- Maven 프로젝트를 Git 로컬 리포지터리로 변경한다.
+- **vcs -> Enable Version Control Integreation** 메뉴를 선택한다.
+
+![mvnprj1](./img/idea_git1.png){: width="400" height="400"}
+
+- 아래 그림의 창에서 보이면 원하는 vcs 종류를 선택한다. Git이 기본으로 설정되어 있다.
+
+![mvnprj1](./img/idea_git2.png){: width="600" height="600"}
+
+- 설정이 끝나면 왼쪽 모서리에 Git 윈도우가 활성화 되는 것을 알 수 있다.
+
+![mvnprj1](./img/idea_git3.png){: width="300" height="300"}
+
+- Github에 생성한 리포지터리를 **Remote** 로 설정한다.
+- **vcs -> Remotes..** 를 선택한다.
+
+![mvnprj1](./img/idea_git4.png){: width="600" height="600"}
+
+- ``+`` 아이콘을 눌러서 **Remote** 리포지터의 URL을 입력한다.
+
+![mvnprj1](./img/idea_git5.png){: width="600" height="600"}
+
+
+- pull, push 등을 통해 정상적으로 동작하는지 확인해본다.
