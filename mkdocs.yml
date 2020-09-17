@@ -6,7 +6,7 @@ theme:
     name: material
     #name: readthedocs    
 
-    language: kr
+    #language: kr
 
     features:
         - tabs
@@ -21,9 +21,6 @@ theme:
     #     text: Ubuntu
     #     code: Ubuntu Mono
 
-# plugins:
-#     - search
-        
   
 
 
@@ -47,17 +44,28 @@ nav:
         - 'JUnit': 
             - 'JUnit 소개': tdd/junit5_01.md
             - 'JUnit5': tdd/junit5_02.md
+        - 'GTest':
+            - 'C++ 개발 환경': effcpp/01_prerequisite.md
+            - '구글테스트 설정': effcpp/02_gtest_setup.md
     - JAVA:
         - 'New in Java': effjava/intro.md
         - 'Annotations': effjava/annotation.md
         - 'Lambda': effjava/lambda.md
+        - 'Module': effjava/module.md
     - Etc:
         - '용어': etc/terms.md
         - 'Git': etc/git.md
-    
-    
-    
+    - BigData:
+        - '시작': bigdata/00_prepare.md
+        - '다운로드': bigdata/01_download.md
+
+plugins:    
+    - search
+
 markdown_extensions:
+    - toc:
+        permalink: "#"
+        baselevel: 3
     - markdown.extensions.admonition
     - markdown.extensions.attr_list
     - markdown.extensions.codehilite:
@@ -88,11 +96,12 @@ markdown_extensions:
     - pymdownx.smartsymbols
     - pymdownx.snippets:
         check_paths: true
-    - pymdownx.superfences
+    - pymdownx.superfences        
     - pymdownx.tabbed
     - pymdownx.tasklist:
         custom_checkbox: true
     - pymdownx.tilde
     
 extra_javascript:
-  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML    
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
+  #- https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js

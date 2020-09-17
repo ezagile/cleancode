@@ -1,12 +1,12 @@
-## git 사용하기
+# git 사용하기
 
-#### Git 설치하기
+### Git 설치하기
 
 - http://git-scm.com    
 - 시작메뉴> 모든 프로그램 > Git > Git Bash 실행
 - `git --version` 으로 설치확인
 
-#### 초기 설정
+### 초기 설정
 
 - git 설정은 사용자 홈의 .gitconfig 파일에 저장.
 - 직접 편집하거나 config 명령어를 사용.
@@ -16,7 +16,7 @@ $ git config --global user.name "<사용자명>"
 $ git config --global user.email "<메일 주소>"
 ```
 
-#### 저장소 만들기
+### 저장소 만들기
 
 특정 폴더를 Git의 저장소로 등록하려면, 해당 폴더로 이동하여 init 명령어를 수행.
 
@@ -24,7 +24,7 @@ $ git config --global user.email "<메일 주소>"
 $ git init
 ```
 
-#### 파일 커밋하기
+### 파일 커밋하기
 
 새로운 파일을 작성하고 원격 저장소에 등록하기
 
@@ -66,7 +66,7 @@ $ git log
 $ gitk
 ```
 
-#### 원격 저장소에 push
+### 원격 저장소에 push
 
 - 원격 저장소를 추가하려면, remote 명령어를 사용
 
@@ -81,16 +81,23 @@ $ git push repository refspec
 ```
 
 
-#### 원격 저장소 복제
+### 원격 저장소 복제
 - repository 는 원격 저장소의 URL, directory는 복제할 폴더명
 
 ``` sh
 $ git clone repository directory
 ```
 
-#### 원격 저장소에서 pull
+### 원격 저장소에서 pull
 
 ``` sh
 $ git pull repository refspec
 ```
 
+## Git 기능 관련
+
+![git_cmd](./img/git_cmd.png){: width="700" height="500"}
+
+- 그림 출처: https://www.jrebel.com/blog/git-cheat-sheet
+
+## Git Workflow
