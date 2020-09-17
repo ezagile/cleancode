@@ -15,7 +15,7 @@
     
     
       
-        <title>Pattern - ezAgile</title>
+        <title>C++ 개발 환경 - ezAgile</title>
       
     
     
@@ -56,6 +56,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -80,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Pattern
+              C++ 개발 환경
             
           </span>
         </div>
@@ -129,14 +134,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     
@@ -161,7 +168,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../tdd/intro/" class="md-tabs__link">
+        <a href="../../tdd/intro/" class="md-tabs__link md-tabs__link--active">
           TDD
         </a>
       
@@ -375,10 +382,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       TDD
@@ -532,10 +541,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
     
     <label class="md-nav__link" for="nav-3-4">
       GTest
@@ -557,11 +568,89 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../effcpp/01_prerequisite/" title="C++ 개발 환경" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        C++ 개발 환경
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="C++ 개발 환경" class="md-nav__link md-nav__link--active">
       C++ 개발 환경
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    구글 테스트 설정
+  </a>
+  
+    <nav class="md-nav" aria-label="구글 테스트 설정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    사전 준비 작업
+  </a>
+  
+    <nav class="md-nav" aria-label="사전 준비 작업">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-mingw" class="md-nav__link">
+    VS Code + MinGW 설치
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-c" class="md-nav__link">
+    VS Code에서 C++ 개발 환경 설정하기
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-git" class="md-nav__link">
+    VS Code에서 Git 연동하기
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -571,7 +660,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../effcpp/02_gtest_setup/" title="구글테스트 설정" class="md-nav__link">
+    <a href="../02_gtest_setup/" title="구글테스트 설정" class="md-nav__link">
       구글테스트 설정
     </a>
   </li>
@@ -780,6 +869,76 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    구글 테스트 설정
+  </a>
+  
+    <nav class="md-nav" aria-label="구글 테스트 설정">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    사전 준비 작업
+  </a>
+  
+    <nav class="md-nav" aria-label="사전 준비 작업">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-mingw" class="md-nav__link">
+    VS Code + MinGW 설치
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-c" class="md-nav__link">
+    VS Code에서 C++ 개발 환경 설정하기
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vs-code-git" class="md-nav__link">
+    VS Code에서 Git 연동하기
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -789,9 +948,18 @@
                   
                 
                 
-                  <h1>Pattern</h1>
+                  <h1>C++ 개발 환경</h1>
                 
-                
+                <h2 id="_1">구글 테스트 설정<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">사전 준비 작업<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>구글 테스트를 수행하기 위해서는 사전에 필요한 것은 C++ 개발 환경이다.</p>
+<p>Windows 운영 체제,  <strong>Gnu gcc 컴파일러</strong>, <strong>Visual Studio Code</strong> 를 활용한 환경 설정에 대해서 설명한다.</p>
+<p>참고로, <strong>Git</strong> 은 이미 설치되어 있는 상태에서 시작한다.</p>
+<h4 id="vs-code-mingw">VS Code + MinGW 설치<a class="headerlink" href="#vs-code-mingw" title="Permanent link">&para;</a></h4>
+<p><a href="http://mingw-w64.org/doku.php/download/mingw-builds">http://mingw-w64.org/doku.php/download/mingw-builds</a></p>
+<p>참고&gt; <a href="https://code.visualstudio.com/docs/cpp/config-mingw">https://code.visualstudio.com/docs/cpp/config-mingw</a></p>
+<h4 id="vs-code-c">VS Code에서 C++ 개발 환경 설정하기<a class="headerlink" href="#vs-code-c" title="Permanent link">&para;</a></h4>
+<h4 id="vs-code-git">VS Code에서 Git 연동하기<a class="headerlink" href="#vs-code-git" title="Permanent link">&para;</a></h4>
                 
               
               
@@ -806,6 +974,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../tdd/junit5_02/" title="JUnit5" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                JUnit5
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../02_gtest_setup/" title="구글테스트 설정" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                구글테스트 설정
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

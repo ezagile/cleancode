@@ -15,7 +15,7 @@
     
     
       
-        <title>Pattern - ezAgile</title>
+        <title>Module - ezAgile</title>
       
     
     
@@ -56,6 +56,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#module" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -80,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Pattern
+              Module
             
           </span>
         </div>
@@ -129,14 +134,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     
@@ -174,7 +181,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../effjava/intro/" class="md-tabs__link">
+        <a href="../intro/" class="md-tabs__link md-tabs__link--active">
           JAVA
         </a>
       
@@ -591,10 +598,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
     <label class="md-nav__link" for="nav-4">
       JAVA
@@ -618,7 +627,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../effjava/intro/" title="New in Java" class="md-nav__link">
+    <a href="../intro/" title="New in Java" class="md-nav__link">
       New in Java
     </a>
   </li>
@@ -630,7 +639,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../effjava/annotation/" title="Annotations" class="md-nav__link">
+    <a href="../annotation/" title="Annotations" class="md-nav__link">
       Annotations
     </a>
   </li>
@@ -642,7 +651,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../effjava/lambda/" title="Lambda" class="md-nav__link">
+    <a href="../lambda/" title="Lambda" class="md-nav__link">
       Lambda
     </a>
   </li>
@@ -652,11 +661,74 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../effjava/module/" title="Module" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Module
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Module" class="md-nav__link md-nav__link--active">
       Module
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    모듈이란
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    호환성
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    서비스들
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -780,6 +852,59 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    모듈이란
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    호환성
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    서비스들
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection" class="md-nav__link">
+    Reflection
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -789,9 +914,90 @@
                   
                 
                 
-                  <h1>Pattern</h1>
-                
-                
+                <h1 id="module">Module<a class="headerlink" href="#module" title="Permanent link">&para;</a></h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Mark Reinhold 의 <a href="http://openjdk.java.net/projects/jigsaw/spec/sotms/#defining-modules">The State of the Module System</a>을 참고해서 작성.</p>
+</div>
+<p>Java 9 에서 새로 소개된 <strong>모듈 시스템</strong> 에 대해 소개한다.</p>
+<p>모듈성(<a href="http://openjdk.java.net/projects/jigsaw/">Project Jigsaw</a>) 은 개발자들이 S/W 시스템의 빌드, 유지, 보수 시 생산성을 높이는데 도움이 된다.</p>
+<h2 id="_1">모듈이란<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>모듈성은 다수의 패키지(packages)들에 대한 좀 더 높은 수준의 집합으로 볼 수 있다.</li>
+<li>자바의 <strong>module</strong> 은 유일한 이름, 패키지들, 리소스들(이미지 또는 XML 파일등), 그리고 하나의 <strong>module descriptor</strong> 로 구성된다.</li>
+<li>
+<p><code>module descriptor</code>에는 다음 내용이 기술된다.</p>
+<ul>
+<li>모듈 이름(module name)</li>
+<li>모듈들의 의존성(module dependencies)</li>
+<li>제공하는 서비스들    </li>
+<li>소비하는 서비스들</li>
+<li>리플렉션(reflection) 을 허용하는 다른 모듈들</li>
+</ul>
+</li>
+<li>
+<p>JDK 의 모듈들 확인하기</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    java --list-modules
+</code></pre></div>
+
+<ul>
+<li>Module declarations</li>
+</ul>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">module</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">module</span> <span class="n">com</span><span class="p">.</span><span class="na">foo</span><span class="p">.</span><span class="na">bar</span> <span class="p">{</span> <span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">requires</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">module</span> <span class="n">com</span><span class="p">.</span><span class="na">foo</span><span class="p">.</span><span class="na">bar</span> <span class="p">{</span>
+    <span class="n">requires</span> <span class="n">org</span><span class="p">.</span><span class="na">baz</span><span class="p">.</span><span class="na">qux</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">exports</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="n">module</span> <span class="n">com</span><span class="p">.</span><span class="na">foo</span><span class="p">.</span><span class="na">bar</span> <span class="p">{</span>
+    <span class="n">requires</span> <span class="n">org</span><span class="p">.</span><span class="na">baz</span><span class="p">.</span><span class="na">qux</span><span class="p">;</span>
+    <span class="n">exports</span> <span class="n">com</span><span class="p">.</span><span class="na">foo</span><span class="p">.</span><span class="na">bar</span><span class="p">.</span><span class="na">alpha</span><span class="p">;</span>
+    <span class="n">exports</span> <span class="n">com</span><span class="p">.</span><span class="na">foo</span><span class="p">.</span><span class="na">bar</span><span class="p">.</span><span class="na">beta</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+</div>
+<ul>
+<li>Module artifacts</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    META-INF/
+    META-INF/MANIFEST.MF
+    module-info.class
+    com/foo/bar/alpha/AlphaFactory.class
+    com/foo/bar/alpha/Alpha.class
+    ...
+</code></pre></div>
+
+<ul>
+<li>Platform module</li>
+</ul>
+<h2 id="_2">호환성<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h2 id="_3">서비스들<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h2 id="reflection">Reflection<a class="headerlink" href="#reflection" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>참고</p>
+</blockquote>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>The State of the Module System : <a href="http://openjdk.java.net/projects/jigsaw/spec/sotms/#defining-modules">http://openjdk.java.net/projects/jigsaw/spec/sotms/#defining-modules</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Open JDK Project Jigsaw : <a href="http://openjdk.java.net/projects/jigsaw/">http://openjdk.java.net/projects/jigsaw/</a>&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
                 
               
               
@@ -806,6 +1012,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../lambda/" title="Lambda" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Lambda
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../etc/terms/" title="용어" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                용어
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

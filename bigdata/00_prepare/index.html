@@ -15,7 +15,7 @@
     
     
       
-        <title>Pattern - ezAgile</title>
+        <title>시작 - ezAgile</title>
       
     
     
@@ -56,6 +56,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -80,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Pattern
+              시작
             
           </span>
         </div>
@@ -129,14 +134,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../.." class="md-tabs__link">
         Home
       </a>
     
@@ -200,7 +207,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../bigdata/00_prepare/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           BigData
         </a>
       
@@ -723,10 +730,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     
     <label class="md-nav__link" for="nav-6">
       BigData
@@ -748,11 +757,76 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../bigdata/00_prepare/" title="시작" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        시작
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="시작" class="md-nav__link md-nav__link--active">
       시작
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    데이터 추출 및 가공하기
+  </a>
+  
+    <nav class="md-nav" aria-label="데이터 추출 및 가공하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scraping" class="md-nav__link">
+    스크레이핑(Scraping)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crawling" class="md-nav__link">
+    크롤링(Crawling)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    데이터 구조
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -762,7 +836,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../bigdata/01_download/" title="다운로드" class="md-nav__link">
+    <a href="../01_download/" title="다운로드" class="md-nav__link">
       다운로드
     </a>
   </li>
@@ -780,6 +854,63 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    데이터 추출 및 가공하기
+  </a>
+  
+    <nav class="md-nav" aria-label="데이터 추출 및 가공하기">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scraping" class="md-nav__link">
+    스크레이핑(Scraping)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crawling" class="md-nav__link">
+    크롤링(Crawling)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    데이터 구조
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -789,9 +920,34 @@
                   
                 
                 
-                  <h1>Pattern</h1>
+                  <h1>시작</h1>
                 
-                
+                <h2 id="_1">데이터 추출 및 가공하기<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="scraping">스크레이핑(Scraping)<a class="headerlink" href="#scraping" title="Permanent link">&para;</a></h3>
+<ul>
+<li>웹사이트에 있는 특정 정보를 추출하는 기술이다.</li>
+<li>HTML 형식의 정보를 가공해서 저장한다.</li>
+<li>원하는 정보를 추출하기 위해서는 웹사이트의 구조를 분석해야 한다.</li>
+<li>사이트 접근 권한이 필요한 경우도 있다. </li>
+</ul>
+<h3 id="crawling">크롤링(Crawling)<a class="headerlink" href="#crawling" title="Permanent link">&para;</a></h3>
+<ul>
+<li>웹사이트를 돌아다니면서 정보를 추출하는 기술이다.</li>
+<li>작업을 하는 프로그램을 <code>크롤러(Crawler)</code> 또는 <code>스파이더(Spider)</code> 라고 한다.</li>
+</ul>
+<h3 id="_2">데이터 구조<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>수집한 자료들을 어떻게 저장할지 결정해야 한다.</li>
+<li>다루기 쉬운 형태, 저장 방법 등을 고려한다.</li>
+</ul>
+<blockquote>
+<p>많이 사용하는 데이터 형식</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>- CSV
+- JSon
+- XML
+- YAML
+</code></pre></div>
                 
               
               
@@ -806,6 +962,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../etc/git/" title="Git" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Git
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../01_download/" title="다운로드" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                다운로드
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
