@@ -45,8 +45,13 @@ nav:
             - 'JUnit 소개': tdd/junit5_01.md
             - 'JUnit5': tdd/junit5_02.md
         - 'GTest':
-            - 'C++ 개발 환경': effcpp/01_prerequisite.md
-            - '구글테스트 설정': effcpp/02_gtest_setup.md
+            - 'MinGW': effcpp/01_mingw.md
+            - 'MinGW + GTest': effcpp/02_gtest_setup.md
+            - 'CygWin': effcpp/03_cygwin.md
+            - 'Gtest 1': effcpp/04_gtest1.md
+            - 'Gtest Adv1': effcpp/05_gtest2.md
+            - 'Approval': effcpp/90_approvaltest.md
+            - 'CMake': effcpp/99_cmake.md            
     - JAVA:
         - 'New in Java': effjava/intro.md
         - 'Annotations': effjava/annotation.md

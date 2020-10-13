@@ -1,0 +1,1538 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
+    
+    
+      
+        <title>Gtest 1 - ezAgile</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gtest-basic" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="ezAgile" class="md-header-nav__button md-logo" aria-label="ezAgile">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            ezAgile
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Gtest 1
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../ccode/" class="md-tabs__link">
+          Clean Code
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../tdd/intro/" class="md-tabs__link md-tabs__link--active">
+          TDD
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../effjava/intro/" class="md-tabs__link">
+          JAVA
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../etc/terms/" class="md-tabs__link">
+          Etc
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../bigdata/00_prepare/" class="md-tabs__link">
+          BigData
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ezAgile" class="md-nav__button md-logo" aria-label="ezAgile">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ezAgile
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Clean Code
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Clean Code" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Clean Code
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../ccode/" title="소개" class="md-nav__link">
+      소개
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cleancode/meaningful_name/" title="의미있는 이름" class="md-nav__link">
+      의미있는 이름
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cleancode/functions/" title="함수" class="md-nav__link">
+      함수
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cleancode/comments/" title="주석" class="md-nav__link">
+      주석
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cleancode/formatting/" title="형식" class="md-nav__link">
+      형식
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cleancode/objects_data_structure/" title="객체와 자료구조" class="md-nav__link">
+      객체와 자료구조
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cleancode/boundaries/" title="경계" class="md-nav__link">
+      경계
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cleancode/error_handling/" title="에러 처리" class="md-nav__link">
+      에러 처리
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      TDD
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TDD" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        TDD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tdd/intro/" title="소개" class="md-nav__link">
+      소개
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      실습 환경
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="실습 환경" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        실습 환경
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tdd/intellij/" title="Java + Intellij" class="md-nav__link">
+      Java + Intellij
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tdd/eclipse/" title="Java + Eclipse" class="md-nav__link">
+      Java + Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tdd/gtest_vstudio/" title="Cpp + Googl test + Visual Studio 2017" class="md-nav__link">
+      Cpp + Googl test + Visual Studio 2017
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      JUnit
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="JUnit" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        JUnit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tdd/junit5_01/" title="JUnit 소개" class="md-nav__link">
+      JUnit 소개
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tdd/junit5_02/" title="JUnit5" class="md-nav__link">
+      JUnit5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4" checked>
+    
+    <label class="md-nav__link" for="nav-3-4">
+      GTest
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="GTest" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        GTest
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01_mingw/" title="MinGW" class="md-nav__link">
+      MinGW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_gtest_setup/" title="MinGW + GTest" class="md-nav__link">
+      MinGW + GTest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_cygwin/" title="CygWin" class="md-nav__link">
+      CygWin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Gtest 1
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Gtest 1" class="md-nav__link md-nav__link--active">
+      Gtest 1
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gtest-basic" class="md-nav__link">
+    GTest basic
+  </a>
+  
+    <nav class="md-nav" aria-label="GTest basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-concepts" class="md-nav__link">
+    Basic Concepts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertions" class="md-nav__link">
+    Assertions
+  </a>
+  
+    <nav class="md-nav" aria-label="Assertions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-assertions" class="md-nav__link">
+    Basic Assertions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-comparision" class="md-nav__link">
+    Binary Comparision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-copmparision" class="md-nav__link">
+    String Copmparision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    간단한 테스트 작성
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-fixtures" class="md-nav__link">
+    Test Fixtures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoking-the-tests" class="md-nav__link">
+    Invoking the Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    main() 함수 작성
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05_gtest2/" title="Gtest Adv1" class="md-nav__link">
+      Gtest Adv1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../90_approvaltest/" title="Approval" class="md-nav__link">
+      Approval
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../99_cmake/" title="CMake" class="md-nav__link">
+      CMake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      JAVA
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="JAVA" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        JAVA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../effjava/intro/" title="New in Java" class="md-nav__link">
+      New in Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../effjava/annotation/" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../effjava/lambda/" title="Lambda" class="md-nav__link">
+      Lambda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../effjava/module/" title="Module" class="md-nav__link">
+      Module
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Etc
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Etc" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Etc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../etc/terms/" title="용어" class="md-nav__link">
+      용어
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../etc/git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      BigData
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="BigData" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        BigData
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bigdata/00_prepare/" title="시작" class="md-nav__link">
+      시작
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../bigdata/01_download/" title="다운로드" class="md-nav__link">
+      다운로드
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gtest-basic" class="md-nav__link">
+    GTest basic
+  </a>
+  
+    <nav class="md-nav" aria-label="GTest basic">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-concepts" class="md-nav__link">
+    Basic Concepts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assertions" class="md-nav__link">
+    Assertions
+  </a>
+  
+    <nav class="md-nav" aria-label="Assertions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-assertions" class="md-nav__link">
+    Basic Assertions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#binary-comparision" class="md-nav__link">
+    Binary Comparision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#string-copmparision" class="md-nav__link">
+    String Copmparision
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    간단한 테스트 작성
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-fixtures" class="md-nav__link">
+    Test Fixtures
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invoking-the-tests" class="md-nav__link">
+    Invoking the Tests
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    main() 함수 작성
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                  <h1>Gtest 1</h1>
+                
+                <h2 id="gtest-basic">GTest basic<a class="headerlink" href="#gtest-basic" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">What &amp; How Test?</p>
+<ul>
+<li><strong>independent and repeatable</strong> : 각 테스트들은 다른 객체들에서 동작하고 서로 독립적이고, 실패 시 빠른 디버깅</li>
+<li><strong>well organized and reflect the structure of the tested code</strong></li>
+<li><strong>portable and reusable</strong></li>
+<li><strong>provide much imormation about the problem as possible</strong> </li>
+<li><strong>should be fast</strong></li>
+<li><strong>test writers focus on test content</strong></li>
+</ul>
+</div>
+<blockquote>
+<p>GTest 는 연관되는 테스트들의 그룹에 대해 <strong>Test Case</strong> 라는 용어를 사용하지만, <code>ISTQB</code>:(<a href="https://www.istqb.org/">https://www.istqb.org/</a>) 를 포함해서 소프트웨어 품질과 관련한 도서들에서는 <strong>Test Suite</strong> 를 사용한다.
+GTest 의 <strong>Test</strong> 는 ISTQB 의 <strong>Test Case</strong> 에 해당한다.</p>
+</blockquote>
+<h3 id="basic-concepts">Basic Concepts<a class="headerlink" href="#basic-concepts" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Google test를 시작할때, <em>assertion</em> 을 사용하면서 시작한다.</li>
+<li><em>assertion</em> 은 조건이 참인지 검사하는 명령문이다.</li>
+<li><em>assertion</em> 의 결과는 <em>success</em>, <em>nonfatal failure</em>, 또는 <em>fatal failure</em> 이다.</li>
+<li><em>fatal failure</em> 가 발생하면, 현재 함수가 중단된다. </li>
+<li><em>Tests</em> 는 코드의 행위(behavior) 를 검증하기 <em>assertion</em> 을 사용한다.</li>
+<li><em>Test suite</em> 는 하나 이상의 <em>Test</em> 를 포함한다. <em>Test suite</em> 의 다수의 <em>test</em> 들이 객체들과 서브루틴들을 공유하기 위해서는 <strong>test fixture class</strong> 를 생성한다.</li>
+<li><em>Test probram</em> 은 다수의 <em>test suite</em> 를 포함할 수 있다.</li>
+</ul>
+<h3 id="assertions">Assertions<a class="headerlink" href="#assertions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>구글 테스트의 <strong>assertion</strong> 들은 함수 호출과 유사한 <strong>macro</strong> 들이다. </li>
+<li>클래스나 함수를 테스하기 위해, 클래스나 함수의 행위에 대해 <strong>assertion</strong> 을 사용한다.</li>
+<li><strong>assertion</strong> 실패하면, 구글 테스트는 소스의 줄넘버와 메시지를 출력한다.</li>
+<li><code>ASSERT_*</code> 은 실패시 <em>fatal failure</em> 를 발생시키고 함수를 중단한다.</li>
+<li><code>EXPECT_*</code> 은 실패시 <em>nonfatal failure</em> 를 발생시킨다.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">ASSERT_EQ</span><span class="p">(</span><span class="n">x</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="n">y</span><span class="p">.</span><span class="n">size</span><span class="p">())</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Vectors x and y are of unequal length&quot;</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Vectors x and y differ at index &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h4 id="basic-assertions">Basic Assertions<a class="headerlink" href="#basic-assertions" title="Permanent link">&para;</a></h4>
+<ul>
+<li>기본적인 <em>true/false</em> 조건을 테스트한다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Fatal assertion</th>
+<th>Nonfatal assertion</th>
+<th>Verifies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ASSERT_TRUE(condition);</code></td>
+<td><code>EXPECT_TRUE(condition);</code></td>
+<td><code>condition</code> is true</td>
+</tr>
+<tr>
+<td><code>ASSERT_FALSE(condition);</code></td>
+<td><code>EXPECT_FALSE(condition);</code></td>
+<td><code>condition</code> is false</td>
+</tr>
+</tbody>
+</table>
+<h4 id="binary-comparision">Binary Comparision<a class="headerlink" href="#binary-comparision" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ASSERT_EQ( <strong>actual</strong>, <strong>exptected</strong> )</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Fatal assertion</th>
+<th>Nonfatal assertion</th>
+<th>Verifies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ASSERT_EQ(val1, val2);</code></td>
+<td><code>EXPECT_EQ(val1, val2);</code></td>
+<td><code>val1 == val2</code></td>
+</tr>
+<tr>
+<td><code>ASSERT_NE(val1, val2);</code></td>
+<td><code>EXPECT_NE(val1, val2);</code></td>
+<td><code>val1 != val2</code></td>
+</tr>
+<tr>
+<td><code>ASSERT_LT(val1, val2);</code></td>
+<td><code>EXPECT_LT(val1, val2);</code></td>
+<td><code>val1 &lt; val2</code></td>
+</tr>
+<tr>
+<td><code>ASSERT_LE(val1, val2);</code></td>
+<td><code>EXPECT_LE(val1, val2);</code></td>
+<td><code>val1 &lt;= val2</code></td>
+</tr>
+<tr>
+<td><code>ASSERT_GT(val1, val2);</code></td>
+<td><code>EXPECT_GT(val1, val2);</code></td>
+<td><code>val1 &gt; val2</code></td>
+</tr>
+<tr>
+<td><code>ASSERT_GE(val1, val2);</code></td>
+<td><code>EXPECT_GE(val1, val2);</code></td>
+<td><code>val1 &gt;= val2</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>C 문자열(예&gt; <code>const chahr*</code> )들의 값을 비교한다면, **ASSERT_STREQ()**를 사용하라.</li>
+<li>C 문자열이 <strong>NULL</strong> 인지 테스트할 때 <strong>ASSERT_STREQ(c_string, NULL)</strong> 을 사용하라. </li>
+<li>C++ 11 라면, <strong>ASSERT_EQ(c_string, nullptr)</strong> 을 고려해보라.</li>
+</ul>
+<h4 id="string-copmparision">String Copmparision<a class="headerlink" href="#string-copmparision" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Fatal assertion</th>
+<th>Nonfatal assertion</th>
+<th>Verifies</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ASSERT_STREQ(str1,str2);</code></td>
+<td><code>EXPECT_STREQ(str1,str2);</code></td>
+<td>두 문자열이 동일한가</td>
+</tr>
+<tr>
+<td><code>ASSERT_STRNE(str1,str2);</code></td>
+<td><code>EXPECT_STRNE(str1,str2);</code></td>
+<td>두 문자열이 다른가?</td>
+</tr>
+<tr>
+<td><code>ASSERT_STRCASEEQ(str1,str2);</code></td>
+<td><code>EXPECT_STRCASEEQ(str1,str2);</code></td>
+<td>대소문자 관계없이 동일한가?</td>
+</tr>
+<tr>
+<td><code>ASSERT_STRCASENE(str1,str2);</code></td>
+<td><code>EXPECT_STRCASENE(str1,str2);</code></td>
+<td>대소문자 관계없이 다른가?</td>
+</tr>
+</tbody>
+</table>
+<h4 id="_1">간단한 테스트 작성<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p>Creat a test</p>
+</blockquote>
+<ol>
+<li>테스트 함수를 정의하기 위해 <code>TEST()</code> 매크로를 사용한다. 반환값이 없는 보통의 C++ 함수이다.</li>
+<li>함수 내부에 값을 체크하기 위해 다양한 구글 테스트의 <em>assertion</em> 들을 사용할 수 있다. 포함시키고 싶은 C++ 명령문도 가능한다.</li>
+<li>테스트의 결과는 <em>assertion</em> 에 의해 결정된다. 테스트에 있는 <em>assertion</em> 이 실패하면, 전체 테스트가 실패한다.</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><span class="n">TEST</span><span class="p">(</span><span class="n">TestSuiteName</span><span class="p">,</span> <span class="n">TestName</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">//... test body ...</span>
+<span class="p">}</span>
+</code></pre></div>
+- <code>TEST()</code> 의  첫 번째 인자는 <em>test suite</em> 의 이름이고, 두 번째는 <em>test</em> 의 이름이다. 
+- 이름들은 유효한 C++ 식별자여야 하고, <code>_</code> (underscore) 는 포함할 수 없다. </p>
+<blockquote>
+<p>A tested function</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="nf">Factorial</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">);</span>       <span class="c1">// n! 값을 반환</span>
+</code></pre></div>
+
+<blockquote>
+<p>A test suite for the factorial function</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1">// 0 입력 테스트</span>
+<span class="n">TEST</span><span class="p">(</span><span class="n">FactorialTest</span><span class="p">,</span> <span class="n">ZeroInput</span><span class="p">){</span>
+    <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">Fatorial</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1">// 양수 입력 테스트</span>
+<span class="n">TEST</span><span class="p">(</span><span class="n">FactorialTest</span><span class="p">,</span> <span class="n">PositiveInput</span><span class="p">){</span>
+    <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">Fatorial</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">Fatorial</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">Fatorial</span><span class="p">(</span><span class="mi">3</span><span class="p">),</span> <span class="mi">6</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>논리적으로 연관된 <em>test</em> 들은 동일한 <em>test suite</em> 내에 포함되어야한다. 즉, <strong>TEST()</strong> 의 첫 번째 인자들은 동일해아 한다.</li>
+<li>앞의 예는 2개의 <strong>test</strong>, <em>ZeroInput</em> 과 <em>PositivieInput</em> 가 있고, <em>FactorialTest</em> 라는 <strong>Test suite</strong> 에 속한다.</li>
+</ul>
+<h3 id="test-fixtures">Test Fixtures<a class="headerlink" href="#test-fixtures" title="Permanent link">&para;</a></h3>
+<ul>
+<li>다수의 테스트들에 대해 동일한 데이터 설정을 적용하려면 <em>test fixture</em> 를 사용한다.</li>
+<li>이는 다수의 테스트들에 대해 동일한 객체들의 설정을 재사용하도록 해준다.</li>
+</ul>
+<blockquote>
+<p>Fixture 생성하기</p>
+</blockquote>
+<ul>
+<li><code>::testing::Test</code> 에서 파생된다. <code>protected:</code> 로 시작한다. </li>
+<li>클래스 내부에서 사용하길 원하는 객체들을 선언한다.</li>
+<li>필요 시, 디폴트 생성자나 <code>SetUp()</code> 함수를 작성한다. <code>Setup()</code> 이라고 작성하는 흔한 실수를 하지 않으려면, C++ 11 의 <code>override</code> 를 사용하라.</li>
+<li>필요 시, 소멸자나 <code>TearDown()</code> 함수를 작성하라. 생성자나 <code>SetUp()</code> 에서 할당한 자원을 반환한다.</li>
+<li>필요 하다면 테스트들이 공유하는 서브루틴을 정의하라.</li>
+</ul>
+<p><strong>Fixture</strong> 를 사용할 때는, <code>TEST_F())</code> 를 사용한다. 
+<div class="highlight"><pre><span></span><code><span class="n">TEST_F</span><span class="p">(</span><span class="n">TestFixtureName</span><span class="p">,</span> <span class="n">TestName</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// ... test body ...</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<ul>
+<li><code>TEST_F()</code> 매크로를 사용하려면, 사전에 <em>test fixture</em> 를 정의해야만 한다. 그렇지 않으면, <mark>virtual outside calss declaration</mark> 컴파일 에러를 볼 것이다.</li>
+<li><code>TEST_F()</code> 와 정의되는 각 테스트에 대해, 구글 테스트는 런타임에 새로운 <em>test fixture</em> 를 생성하고, <code>SetUp()</code>에 의해 초기화되고, 테스트를 실행하고, <code>TearDown()</code> 에 의해 정리되고, <em>test fixture</em> 를 삭제한다.</li>
+<li>같은 <em>test suite</em> 에 속한 다른 <em>test</em> 들은 다른 <em>test fixture</em> 객체를 가진다.</li>
+<li>
+<p>구글 테스트는 <em>test fixture</em> 를 삭제하고 다음 <em>test fixture</em> 를 생성한다. 다수의 테스트들에 대해서 동일한 <em>test fixture</em> 를 <strong>재사용하지 않는다</strong>.</p>
+</li>
+<li>
+<p>Queue class 예제의 interface 
+<div class="highlight"><pre><span></span><code><span class="k">template</span> <span class="o">&lt;</span><span class="k">typename</span> <span class="n">E</span><span class="o">&gt;</span>   <span class="c1">// E is the element type.</span>
+<span class="k">class</span> <span class="nc">Queue</span> <span class="p">{</span>
+ <span class="k">public</span><span class="o">:</span>
+  <span class="n">Queue</span><span class="p">();</span>
+  <span class="kt">void</span> <span class="nf">Enqueue</span><span class="p">(</span><span class="k">const</span> <span class="n">E</span><span class="o">&amp;</span> <span class="n">element</span><span class="p">);</span>
+  <span class="n">E</span><span class="o">*</span> <span class="nf">Dequeue</span><span class="p">();</span>         <span class="c1">// Returns NULL if the queue is empty.</span>
+  <span class="kt">size_t</span> <span class="nf">size</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+  <span class="p">...</span>
+<span class="p">};</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>먼저, <em>fixture class</em> 를 정의한다.</p>
+</li>
+<li>
+<p>클래스 <code>Foo</code> 에 대한 테스트는 <code>FfooTest</code> 로 사용해야 한다.
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">QueueTest</span> <span class="o">:</span> <span class="k">public</span> <span class="o">::</span><span class="n">testing</span><span class="o">::</span><span class="n">Test</span> <span class="p">{</span>
+ <span class="k">protected</span><span class="o">:</span>
+  <span class="kt">void</span> <span class="n">SetUp</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span>
+     <span class="n">q1_</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+     <span class="n">q2_</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+     <span class="n">q2_</span><span class="p">.</span><span class="n">Enqueue</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="c1">//void TearDown() override {}</span>
+
+  <span class="n">Queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">q0_</span><span class="p">;</span>
+  <span class="n">Queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">q1_</span><span class="p">;</span>
+  <span class="n">Queue</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">q2_</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>작성한 <em>fixture</em> 에 대한 테스트 코드를 <code>TEST_F()</code> 를 사용해서 작성한다.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="n">TEST_F</span><span class="p">(</span><span class="n">QueueTest</span><span class="p">,</span> <span class="n">IsEmptyInitially</span><span class="p">)</span> <span class="p">{</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">q0_</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="mi">0</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="n">TEST_F</span><span class="p">(</span><span class="n">QueueTest</span><span class="p">,</span> <span class="n">DequeueWorks</span><span class="p">)</span> <span class="p">{</span>
+  <span class="kt">int</span><span class="o">*</span> <span class="n">n</span> <span class="o">=</span> <span class="n">q0_</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
+
+  <span class="n">n</span> <span class="o">=</span> <span class="n">q1_</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+  <span class="n">ASSERT_NE</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">q1_</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="k">delete</span> <span class="n">n</span><span class="p">;</span>
+
+  <span class="n">n</span> <span class="o">=</span> <span class="n">q2_</span><span class="p">.</span><span class="n">Dequeue</span><span class="p">();</span>
+  <span class="n">ASSERT_NE</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="k">nullptr</span><span class="p">);</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="o">*</span><span class="n">n</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+  <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">q2_</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span> <span class="mi">1</span><span class="p">);</span>
+  <span class="k">delete</span> <span class="n">n</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<blockquote>
+<p>테스트 실행 시,</p>
+</blockquote>
+<ol>
+<li>구글 테스트는 <code>QueueTest</code> 객체(<code>t1</code>)를 생성한다.</li>
+<li><code>t1.SetUp()</code> 이 <code>t1</code> 을 초기화 한다.</li>
+<li>첫 번째 테스트 <code>IsEmptyInitially</code> 가 <code>t1</code> 에 대해 동작한다.</li>
+<li><code>t1.TearDown()</code> 정리 작업을 하고 테스트가 끝난다.</li>
+<li><code>t1</code> 이 소멸한다.</li>
+<li>위 단계들이 또 다른 <code>QueueTest</code> 객체에 대해 반복된다. </li>
+</ol>
+<h3 id="invoking-the-tests">Invoking the Tests<a class="headerlink" href="#invoking-the-tests" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><code>RUN_ALL_TESTS()</code> 매크로  실행 시,</p>
+</blockquote>
+<ul>
+<li>모든 구글 테스트 플래그들의 상태를 저장.</li>
+<li>첫 번째 테스트에 대한 <em>test fixture</em> 객체를 생성.</li>
+<li><code>SetUp()</code> 에 의한 초기화.</li>
+<li><em>fixture object</em> 에서 테스트 실행.</li>
+<li><code>TearDown()</code> 에 의한 정리 작업.</li>
+<li><em>fixture</em> 삭제.</li>
+<li>모든 구글 테스트 플래그들 복구.</li>
+<li>모든 테스트가 끝날 때가지, 테스트 마다 위의 작업을 반복.</li>
+</ul>
+<div class="admonition importance">
+<p class="admonition-title">Importance</p>
+<ul>
+<li><code>RUN_ALL_TESTS()</code> 의 반환 값에 주의해야 한다. </li>
+<li>따라서, <code>main()</code> 함수는 <code>RUN_ALL_TESTS()</code> 의 반환 값을 반환한다.</li>
+<li>반드시 <code>RUN_ALL_TESTS()</code> 는 한번만 호출한다. 여러 번 호출하면 구글 테스트의 고급 특성(e.g., thread-safe death tests)과 충돌이 발생한다. </li>
+</ul>
+</div>
+<h3 id="main">main() 함수 작성<a class="headerlink" href="#main" title="Permanent link">&para;</a></h3>
+<p>Most users should not need to write their own main function and instead link with gtest_main (as opposed to with gtest), which defines a suitable entry point. See the end of this section for details. The remainder of this section should only apply when you need to do something custom before the tests run that cannot be expressed within the framework of fixtures and test suites.</p>
+<p>If you write your own main function, it should return the value of RUN_ALL_TESTS().</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&quot;this/package/foo.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;gtest/gtest.h&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span> <span class="n">my</span> <span class="p">{</span>
+    <span class="k">namespace</span> <span class="n">project</span> <span class="p">{</span>
+        <span class="k">namespace</span> <span class="p">{</span>
+
+            <span class="c1">// Foo 클래스를 테스트하기 위한 FooTest Fixture</span>
+            <span class="k">class</span> <span class="nc">FooTest</span> <span class="o">:</span> <span class="k">public</span> <span class="o">::</span><span class="n">testing</span><span class="o">::</span><span class="n">Test</span> <span class="p">{</span>
+                <span class="k">protected</span><span class="o">:</span>                
+
+                <span class="n">FooTest</span><span class="p">()</span> <span class="p">{</span> <span class="p">}</span>
+
+                <span class="o">~</span><span class="n">FooTest</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span> <span class="p">}</span>
+
+                <span class="c1">// 생성자와 소멸자 외에 추가적으로 필요한 작업</span>
+                <span class="kt">void</span> <span class="n">SetUp</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span>
+                    <span class="c1">// 생성자 이후에 바로 호출된다. </span>
+                    <span class="c1">// 각각의 테스트 전에 실행된다.</span>
+                <span class="p">}</span>
+
+                <span class="kt">void</span> <span class="n">TearDown</span><span class="p">()</span> <span class="k">override</span> <span class="p">{</span>
+                    <span class="c1">// 각각의 테스트 이후에 호출된다.</span>
+                    <span class="c1">// 소멸자 호출전에 실행된다.</span>
+                <span class="p">}</span>
+
+                <span class="c1">// Test suite에 포함된 모든 test 들에 의해 사용될 수 있는 멤버들이 선언된다.</span>
+            <span class="p">};</span>
+
+            <span class="c1">// Foo::Bar() 메소드 테스트</span>
+            <span class="n">TEST_F</span><span class="p">(</span><span class="n">FooTest</span><span class="p">,</span> <span class="n">MethodBarDoesAbc</span><span class="p">)</span> <span class="p">{</span>
+                <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">input_filepath</span> <span class="o">=</span> <span class="s">&quot;this/package/testdata/myinputfile.dat&quot;</span><span class="p">;</span>
+                <span class="k">const</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">output_filepath</span> <span class="o">=</span> <span class="s">&quot;this/package/testdata/myoutputfile.dat&quot;</span><span class="p">;</span>
+                <span class="n">Foo</span> <span class="n">f</span><span class="p">;</span>
+                <span class="n">EXPECT_EQ</span><span class="p">(</span><span class="n">f</span><span class="p">.</span><span class="n">Bar</span><span class="p">(</span><span class="n">input_filepath</span><span class="p">,</span> <span class="n">output_filepath</span><span class="p">),</span> <span class="mi">0</span><span class="p">);</span>
+            <span class="p">}</span>
+
+            <span class="c1">// Foo 가 Xyz 하는 것을 테스트</span>
+            <span class="n">TEST_F</span><span class="p">(</span><span class="n">FooTest</span><span class="p">,</span> <span class="n">DoesXyz</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// Exercises the Xyz feature of Foo.</span>
+            <span class="p">}</span>
+
+        <span class="p">}</span>  <span class="c1">// namespace</span>
+    <span class="p">}</span>  <span class="c1">// namespace project</span>
+<span class="p">}</span>  <span class="c1">// namespace my</span>
+
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+    <span class="o">::</span><span class="n">testing</span><span class="o">::</span><span class="n">InitGoogleTest</span><span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">);</span>
+    <span class="k">return</span> <span class="nf">RUN_ALL_TESTS</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The ::testing::InitGoogleTest() function parses the command line for googletest flags, and removes all recognized flags. This allows the user to control a test program's behavior via various flags, which we'll cover in the AdvancedGuide. You must call this function before calling RUN_ALL_TESTS(), or the flags won't be properly initialized.</p>
+<p>On Windows, InitGoogleTest() also works with wide strings, so it can be used in programs compiled in UNICODE mode as well.</p>
+<p>But maybe you think that writing all those main functions is too much work? We agree with you completely, and that's why Google Test provides a basic implementation of main(). If it fits your needs, then just link your test with the gtest_main library and you are good to go.</p>
+<p>NOTE: ParseGUnitFlags() is deprecated in favor of InitGoogleTest().</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../03_cygwin/" title="CygWin" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                CygWin
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../05_gtest2/" title="Gtest Adv1" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Gtest Adv1
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 JongYun Jung
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>

@@ -15,7 +15,7 @@
     
     
       
-        <title>구글테스트 설정 - ezAgile</title>
+        <title>MinGW + GTest - ezAgile</title>
       
     
     
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              구글테스트 설정
+              MinGW + GTest
             
           </span>
         </div>
@@ -570,8 +570,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../01_prerequisite/" title="C++ 개발 환경" class="md-nav__link">
-      C++ 개발 환경
+    <a href="../01_mingw/" title="MinGW" class="md-nav__link">
+      MinGW
     </a>
   </li>
 
@@ -589,14 +589,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        구글테스트 설정
+        MinGW + GTest
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="구글테스트 설정" class="md-nav__link md-nav__link--active">
-      구글테스트 설정
+    <a href="./" title="MinGW + GTest" class="md-nav__link md-nav__link--active">
+      MinGW + GTest
     </a>
     
       
@@ -614,7 +614,14 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    구글 테스트 환경 설정
+    구글 테스트 빌드하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    구글 테스트 어댑터 사용하기
   </a>
   
 </li>
@@ -623,6 +630,66 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_cygwin/" title="CygWin" class="md-nav__link">
+      CygWin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_gtest1/" title="Gtest 1" class="md-nav__link">
+      Gtest 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../05_gtest2/" title="Gtest Adv1" class="md-nav__link">
+      Gtest Adv1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../90_approvaltest/" title="Approval" class="md-nav__link">
+      Approval
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../99_cmake/" title="CMake" class="md-nav__link">
+      CMake
+    </a>
   </li>
 
         
@@ -847,7 +914,14 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    구글 테스트 환경 설정
+    구글 테스트 빌드하기
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    구글 테스트 어댑터 사용하기
   </a>
   
 </li>
@@ -868,9 +942,43 @@
                   
                 
                 
-                  <h1>구글테스트 설정</h1>
+                  <h1>MinGW + GTest</h1>
                 
-                <h2 id="_1">구글 테스트 환경 설정<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+                <h2 id="_1">구글 테스트 빌드하기<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">사전 준비</p>
+<ul>
+<li><strong>MinGW-w64</strong> 설치</li>
+<li><strong>MSYS2</strong> 설치</li>
+<li><strong>CMake</strong> 설치</li>
+<li>설치된 패키지의 <code>bin</code> 폴더 <mark>path</mark> 환경 변수에 추가</li>
+</ul>
+</div>
+<ul>
+<li>명령 프롬프트 창에서 원하는 디렉토리를 생성한다.</li>
+<li>
+<p><strong>VS Code</strong> 를 실행한다.
+<div class="highlight"><pre><span></span><code><span class="go">cdoe . </span>
+</code></pre></div></p>
+</li>
+<li>
+<p><code>googletest</code> 리포지터리를 복제한다.
+<div class="highlight"><pre><span></span><code><span class="go">git clone https://github.com/google/googletest.git</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>복제된 <code>googletest</code> 폴더로 이동한다.</p>
+</li>
+<li>
+<p><strong>CMake</strong> 를 실행한다.
+<div class="highlight"><pre><span></span><code><span class="go">cmake CMakeLists.txt -G &quot;MinGW Makefiles&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>VS Code</strong> 에 <code>Cmake tool</code> 확장이 설치하고 빌드한다.</p>
+</li>
+</ul>
+<h2 id="_2">구글 테스트 어댑터 사용하기<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
                 
               
               
@@ -889,7 +997,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../01_prerequisite/" title="C++ 개발 환경" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../01_mingw/" title="MinGW" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -898,19 +1006,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                C++ 개발 환경
+                MinGW
               </div>
             </div>
           </a>
         
         
-          <a href="../../effjava/intro/" title="New in Java" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../03_cygwin/" title="CygWin" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                New in Java
+                CygWin
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
