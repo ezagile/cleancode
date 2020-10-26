@@ -1,5 +1,6 @@
 # VS Code Configuration
 
+- 작업 영역 `name.code-workspace` 파일
 
 ```json
 {
@@ -35,3 +36,7 @@
     ]
 }
 ```
+
+- 사용자는 `settings.json` 파일
+- 작업 영역에은 `.vsocde` 아래에 각종 `*.json` 파일들이 생성됨
+- 예를 들어, *c/c++ extension* 을 사용하는 경우 실행 구성 설정은 `c_cpp_properties.json` 파일을 생성함.

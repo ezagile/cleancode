@@ -51,7 +51,10 @@ nav:
             - 'Gtest 1': effcpp/04_gtest1.md
             - 'Gtest Adv1': effcpp/05_gtest2.md
             - 'Approval': effcpp/90_approvaltest.md
+            - 'Approval + gtest': effcpp/91_gtestapproval.md
             - 'CMake': effcpp/99_cmake.md            
+    - C++:
+            - 'lambda': moderncpp/lambda.md
     - JAVA:
         - 'New in Java': effjava/intro.md
         - 'Annotations': effjava/annotation.md
