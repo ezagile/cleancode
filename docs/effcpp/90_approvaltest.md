@@ -3,7 +3,11 @@
 - *Approval Test* 는 *assertions* 의 다른 한가지 방법이다.
 - *Approval Test* 는 복잡한 객체들을 테스트하는 보다 단순하고 우아한 방법이다.
 
-- 전통적인 *Assertions* 은 테스트르 위한 입력을 생성과 결과 검증에 동일한(?) 시간이 소요된다.
+> 전통적인 Assertions 
+
+- 전통적인 *Assertion* 은 테스트에 필요한 입력 생성과 결과 검증에 동일한(?) 시간이 소요된다.
+- 많은 멤버를 가지는 객체들에 대해서 테스트 코드가 복잡해진다.
+
 
 ```cpp
 // Arrange, Act
@@ -17,9 +21,12 @@ REQUIRE(s.getFillings().contains("Tomato"));
 REQUIRE(s.getFillings().contains("Lettuce"));
 REQUIRE(s.getFillings().contains("Cheddar"));
 ```
-- 많은 멤버를 가지는 객체들에 대해서 테스트 코드가 복잡해진다.
+
+> Approval Tests
+
 - *Approval Test* 는 결과 검증을 단순화한다.
 - 이는 결과를 파일에 일단 저장하는 방법을 사용한다.
+
 
 ```cpp
 // Arrange, Act
@@ -28,8 +35,7 @@ Sandwich s = createSandwichForTest();
 Approvals::verify(s)
 ```
 
-- 다음 *approval file* 을 생성한다. 
-- is generated **for** you, but approved **by** you
+- 위 작업으로 *approval file* 이 생성된다. 
 
 ```json
 andwich {
@@ -39,13 +45,14 @@ andwich {
 }
 ```
 
+- 이 파일은 당신을 위해 생성되었으나, 당신에 의해 *approve* 되야 한다.
 
 ## ApprovalTesting
 
 - ==snapshot testing==, ==golden master testing==
 
 - 대부분 테스트는 코드를 작성하기 전에 기대(예상)하는 것을 명시적으로 기술한다.
-- 반면, *ApprovalTesting* 은 체크하고자 하는 데이타를 기술하고, 만족할 때까지 수동으로 체크하도록 한다. 차후, 일관성(consisitency)이 유지됨을 보장하도록 해준다.
+- 반면, *ApprovalTesting* 은 체크하고자 하는 데이타를 기술하고, 만족할 때까지 수동으로 체크하도록 한다. 차후, 일관성(consisitency)이 유지되도록 보장해준다.
 
 - 결과의 차이를 더 쉽게 이해하고 처리하도록 돕는다.
 
@@ -65,7 +72,7 @@ andwich {
 
 ## Tutorial
 
-- 예를 들어, 테스트 파일을 작성한다. `tutorial.cpp`
+- `tutorial.cpp` 테스트 파일을 작성한다. 
 
 ```cpp
 TEST_CASE("HelloApprovals")
@@ -73,6 +80,7 @@ TEST_CASE("HelloApprovals")
     ApprovalTests::Approvals::verify("Hello Approvals");
 }
 ```
+
 - *ApprovingTest* 를 실행한다.
 - ==xxxxx.received.txt== 의 내용을 ==xxxxxx.approved.txt== 에 복사
 - 이때, 테스트는 반드시 통과해야하고, **diff** 도구는 
@@ -84,6 +92,7 @@ TEST_CASE("HelloApprovals")
 - 테스트 실행시, 파일을 읽어서 검증을 수행한다.
 - 만약, 일치하지 않으면 ==Reporter== (Diff 도구) 가 실행된다.
 - *Approval Test* 의 첫 번째 실행은 반드시 **fail** 된다.
+
 
 ### Approval Files
 
@@ -137,7 +146,7 @@ public:
 ```
 
 ```cpp
-ibraryBook harry_potter(
+libraryBook harry_potter(
     "Harry Potter and the Goblet of Fire", "J.K. Rowling",
     30, "English", 752, "978-0439139595");
 

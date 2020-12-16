@@ -21,9 +21,6 @@ theme:
     #     text: Ubuntu
     #     code: Ubuntu Mono
 
-  
-
-
 nav:
     - Home: index.md
     - Clean Code: 
@@ -60,12 +57,23 @@ nav:
         - 'Annotations': effjava/annotation.md
         - 'Lambda': effjava/lambda.md
         - 'Module': effjava/module.md
-    - Etc:
-        - '용어': etc/terms.md
-        - 'Git': etc/git.md
+    - Web:
+        - 'HTML':
+            - 'intro': web/html/01_intro.md
+        - 'Java script':             
+            - 'start': web/javascript/00_intro.md
+            - 'grammar': web/javascript/01_grammar.md
+            - 'flow': web/javascript/02_flowcontrol.md 
+            - 'function': web/javascript/03_function.md           
+            - 'object': web/javascript/04_object.md                        
+            - 'VScode 확장': web/01_vscode_extension.md
     - BigData:
         - '시작': bigdata/00_prepare.md
         - '다운로드': bigdata/01_download.md
+    - Etc:
+        - '용어': etc/terms.md
+        - 'Git': etc/git.md
+        - 'VS Code': etc/vscode.md
 
 plugins:    
     - search
