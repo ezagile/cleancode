@@ -1,0 +1,1903 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.3">
+    
+    
+      
+        <title>grammar - ezAgile</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6e35a1a6.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="ezAgile" class="md-header-nav__button md-logo" aria-label="ezAgile">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            ezAgile
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              grammar
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../ccode/" class="md-tabs__link">
+          Clean Code
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../tdd/intro/" class="md-tabs__link">
+          TDD
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../moderncpp/lambda/" class="md-tabs__link">
+          C++
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../effjava/intro/" class="md-tabs__link">
+          JAVA
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    
+    
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../html/01_intro/" class="md-tabs__link">
+          Web
+        </a>
+      
+    </li>
+  
+
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../bigdata/00_prepare/" class="md-tabs__link">
+          BigData
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../../etc/terms/" class="md-tabs__link">
+          Etc
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="ezAgile" class="md-nav__button md-logo" aria-label="ezAgile">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ezAgile
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Clean Code
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Clean Code" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Clean Code
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../ccode/" title="소개" class="md-nav__link">
+      소개
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cleancode/meaningful_name/" title="의미있는 이름" class="md-nav__link">
+      의미있는 이름
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cleancode/functions/" title="함수" class="md-nav__link">
+      함수
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cleancode/comments/" title="주석" class="md-nav__link">
+      주석
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cleancode/formatting/" title="형식" class="md-nav__link">
+      형식
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cleancode/objects_data_structure/" title="객체와 자료구조" class="md-nav__link">
+      객체와 자료구조
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cleancode/boundaries/" title="경계" class="md-nav__link">
+      경계
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../cleancode/error_handling/" title="에러 처리" class="md-nav__link">
+      에러 처리
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      TDD
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TDD" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        TDD
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tdd/intro/" title="소개" class="md-nav__link">
+      소개
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      실습 환경
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="실습 환경" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        실습 환경
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tdd/intellij/" title="Java + Intellij" class="md-nav__link">
+      Java + Intellij
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tdd/eclipse/" title="Java + Eclipse" class="md-nav__link">
+      Java + Eclipse
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tdd/gtest_vstudio/" title="Cpp + Googl test + Visual Studio 2017" class="md-nav__link">
+      Cpp + Googl test + Visual Studio 2017
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      JUnit
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="JUnit" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        JUnit
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tdd/junit5_01/" title="JUnit 소개" class="md-nav__link">
+      JUnit 소개
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../tdd/junit5_02/" title="JUnit5" class="md-nav__link">
+      JUnit5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
+    
+    <label class="md-nav__link" for="nav-3-4">
+      GTest
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="GTest" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        GTest
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effcpp/01_mingw/" title="MinGW" class="md-nav__link">
+      MinGW
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effcpp/02_gtest_setup/" title="MinGW + GTest" class="md-nav__link">
+      MinGW + GTest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effcpp/03_cygwin/" title="CygWin" class="md-nav__link">
+      CygWin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effcpp/04_gtest1/" title="Gtest 1" class="md-nav__link">
+      Gtest 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effcpp/05_gtest2/" title="Gtest Adv1" class="md-nav__link">
+      Gtest Adv1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effcpp/90_approvaltest/" title="Approval" class="md-nav__link">
+      Approval
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effcpp/91_gtestapproval/" title="Approval + gtest" class="md-nav__link">
+      Approval + gtest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effcpp/99_cmake/" title="CMake" class="md-nav__link">
+      CMake
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      C++
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="C++" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        C++
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../moderncpp/lambda/" title="lambda" class="md-nav__link">
+      lambda
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      JAVA
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="JAVA" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        JAVA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effjava/intro/" title="New in Java" class="md-nav__link">
+      New in Java
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effjava/annotation/" title="Annotations" class="md-nav__link">
+      Annotations
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effjava/lambda/" title="Lambda" class="md-nav__link">
+      Lambda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../effjava/module/" title="Module" class="md-nav__link">
+      Module
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Web
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Web" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-1" type="checkbox" id="nav-6-1">
+    
+    <label class="md-nav__link" for="nav-6-1">
+      HTML
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="HTML" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        HTML
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../html/01_intro/" title="intro" class="md-nav__link">
+      intro
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6-2" type="checkbox" id="nav-6-2" checked>
+    
+    <label class="md-nav__link" for="nav-6-2">
+      Java script
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Java script" data-md-level="2">
+      <label class="md-nav__title" for="nav-6-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Java script
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../00_intro/" title="start" class="md-nav__link">
+      start
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        grammar
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="grammar" class="md-nav__link md-nav__link--active">
+      grammar
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    기본 문법
+  </a>
+  
+    <nav class="md-nav" aria-label="기본 문법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    키워드 및 식별자
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    문자열 자료형
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    숫자 자료형
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool" class="md-nav__link">
+    bool 자료형
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    변수
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    단항 연산자들
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    입력과 출력
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    자료형 변환
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    템플릿 문자열
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#let-const" class="md-nav__link">
+    let, const
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../02_flowcontrol/" title="flow" class="md-nav__link">
+      flow
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../03_function/" title="function" class="md-nav__link">
+      function
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_object/" title="object" class="md-nav__link">
+      object
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../01_vscode_extension/" title="VScode 확장" class="md-nav__link">
+      VScode 확장
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      BigData
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="BigData" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        BigData
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bigdata/00_prepare/" title="시작" class="md-nav__link">
+      시작
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../bigdata/01_download/" title="다운로드" class="md-nav__link">
+      다운로드
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      Etc
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Etc" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Etc
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../etc/terms/" title="용어" class="md-nav__link">
+      용어
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../etc/git/" title="Git" class="md-nav__link">
+      Git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../etc/vscode/" title="VS Code" class="md-nav__link">
+      VS Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    기본 문법
+  </a>
+  
+    <nav class="md-nav" aria-label="기본 문법">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    키워드 및 식별자
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    문자열 자료형
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    숫자 자료형
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bool" class="md-nav__link">
+    bool 자료형
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    변수
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    단항 연산자들
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    입력과 출력
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    자료형 변환
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    템플릿 문자열
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#let-const" class="md-nav__link">
+    let, const
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                  <h1>grammar</h1>
+                
+                <h2 id="_1">기본 문법<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="_2">키워드 및 식별자<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>수식</p>
+</blockquote>
+<ul>
+<li>명령문의 끝에는 관례적으로 세미콜론(;)을 표기한다.</li>
+<li>세미콜론이 없어도 실행하는데 문제는 없지만 관례적으로 사용한다.</li>
+</ul>
+<blockquote>
+<p>키워드</p>
+</blockquote>
+<ul>
+<li>현재 모든 브라우저에서 지원되는 28개 키워드와 미래에 사용될 가능성이 있는 키워드들.</li>
+<li>ECMAScript 6, 7 의 키워들은 최신 브라우저에서 지원하지만 W3C는 사용하지 말 것을 권고.</li>
+</ul>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">모든 브라우저 지원</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>else</td>
+<td>insttanceof</td>
+<td>true</td>
+<td>case</td>
+</tr>
+<tr>
+<td>false</td>
+<td>new</td>
+<td>try</td>
+<td>catch</td>
+<td>finally</td>
+</tr>
+<tr>
+<td>null</td>
+<td>typeof</td>
+<td>continue</td>
+<td>for</td>
+<td>return</td>
+</tr>
+<tr>
+<td>var</td>
+<td>default</td>
+<td>function</td>
+<td>switch</td>
+<td>void</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>if</td>
+<td>this</td>
+<td>while</td>
+<td>do</td>
+</tr>
+<tr>
+<td>in</td>
+<td>throw</td>
+<td>with</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">ECMAScript 6/7</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>debugger</td>
+<td>super</td>
+<td>import</td>
+<td>export</td>
+<td>extends</td>
+</tr>
+<tr>
+<td>class</td>
+<td>let</td>
+<td>yield</td>
+<td>const</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">예약된 키워드</label><div class="tabbed-content">
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abstract</td>
+<td>goto</td>
+<td>native</td>
+<td>await</td>
+<td>double</td>
+</tr>
+<tr>
+<td>implements</td>
+<td>package</td>
+<td>synchronized</td>
+<td>boolean</td>
+<td>enum</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>int</td>
+<td>protected</td>
+<td>transient</td>
+<td>char</td>
+</tr>
+<tr>
+<td>interface</td>
+<td>public</td>
+<td>volatile</td>
+<td>final</td>
+<td>short</td>
+</tr>
+<tr>
+<td>float</td>
+<td>long</td>
+<td>static</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<blockquote>
+<p>식별자</p>
+</blockquote>
+<ul>
+<li>변수명, 함수명들</li>
+<li>숫자로 시작할 수 없다.</li>
+<li>특수 문자는 <code>_</code> 와 <code>$</code> 만 허용.</li>
+<li>공백 문자를 포함할 수 없다.</li>
+<li>한글, 한자 등을 사용할 있지만, 알파벳을 사용하는게 좋다.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">convention</p>
+<ul>
+<li>변수, 객체(인스턴스), 함수, 메소드의 이름은 소문자로 시작한다.</li>
+<li>생성자 함수의 이름은 대문자로 시작</li>
+<li>여러 단어를 조합해서 만들 때 각 단어는 대문자로 한다.</li>
+</ul>
+</div>
+<blockquote>
+<p>주석</p>
+</blockquote>
+<ul>
+<li>HTML 태그 주석은  <code>&lt;!--  --&gt;</code> 를 사용.</li>
+<li>Javascript의 한줄 주석은 <code>//</code> 사용</li>
+<li>여러 줄은 <code>/* 주석 내용 */</code> 를 사용한다.</li>
+</ul>
+<h3 id="_3">문자열 자료형<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>큰 따옴표(<code>"</code>)나 작은 따옴표(<code>'</code>) 를 사용.</li>
+<li>문자열 안에 따옴표를 사용하고 싶다면 밖과 안의 따옴표를 다르게 사용한다.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39; Hello &quot;wordl!&quot; &#39;</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot; Hello &#39;world!&#39; &quot;</span><span class="p">);</span>
+</code></pre></div>
+
+<ul>
+<li>한 종류의 따옴표만 일관되게 사용하고 싶다면 이스케이프 문자(<code>\</code>) 를 사용.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39; Hello \&#39;wordl!\&#39; &#39;</span><span class="p">);</span>
+<span class="nx">alert</span><span class="p">(</span><span class="s2">&quot; Hello \&quot;world!\&quot; &quot;</span><span class="p">);</span>
+</code></pre></div>
+
+<ul>
+<li>알아두어야 할 이스케이프 문자들</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>탈출 문자</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\t</code></td>
+<td>tab</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>new line</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>back slash</td>
+</tr>
+<tr>
+<td><code>\'</code>, <code>\"</code></td>
+<td>quotation</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>문자열들을 연결할 때 <code>+</code> 연산자 사용할 수 있다.</li>
+<li>빈 문자열은 <code>''</code> 로 표현한다.</li>
+</ul>
+<h3 id="_4">숫자 자료형<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>정수와 실수를 모두 같은 자료형으로 처리한다.</li>
+</ul>
+<h3 id="bool">bool 자료형<a class="headerlink" href="#bool" title="Permanent link">&para;</a></h3>
+<ul>
+<li>true/false 를 표현하는 자료형</li>
+<li>비교 연산자나 관계 연산자가 사용된 수식의 결과</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>비교 연산자</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt; ,  &lt;=</td>
+<td>작다, 작거나 같다</td>
+</tr>
+<tr>
+<td>&gt; , &gt;=</td>
+<td>크다, 크거나 같다</td>
+</tr>
+<tr>
+<td>==</td>
+<td>같다</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>다르다</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>문자열 자료형에도 비교 연산자를 사용할 수 있다.</li>
+<li>사전순으로 앞에 오는 문자열이 더 작은 값이다.</li>
+<li>유니코드 값으로 비교하기 때문에 다른 언어들을 비교할 수 있다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>논리 연산자</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>!</td>
+<td>부정 연산자</td>
+</tr>
+<tr>
+<td>&amp;&amp;</td>
+<td>논리곱</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_5">변수<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>변수를 사용하려면 먼전 <strong>선언</strong> 을 해야 한다.</li>
+<li>변수를 선언하기 위해 <strong>var</strong> 키워드를 사용한다.</li>
+<li>선언된 변수에 값을 할당한다. 할당( <strong>=</strong> , 또는 대입) 연산자를 사용한다.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span> <span class="nx">식별자</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">식별자1</span><span class="p">,</span> <span class="nx">식별자2</span><span class="p">;</span>       <span class="c1">// 변수 여러개 동시 선언</span>
+<span class="kd">var</span> <span class="nx">식별자3</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>           <span class="c1">// 선언과 동시에 할당</span>
+</code></pre></div>
+
+<ul>
+<li>할당 연산자에 왼쬑에 변수가 사용되면 변수의 저장공간을 의미하고 오른쪽에 사용되면 변수에 저장된 값을 의미한다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>복합 대입 연산자</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+=</td>
+<td>우변 값에 좌변 값을 더한 결과 저장</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>우변 값에 좌변 값을 뺀 결과 저장</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>우변 값에 좌변 값을 곱한 결과 저장</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>우변 값을 좌변 값으로 나눈 몫을 저장</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>우변 값을 좌변 값으로 나눈 나머지를 저장</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">단항 연산자들<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>증감 연산자</p>
+</blockquote>
+<ul>
+<li><strong>1</strong> 을 증가/감소 시킬 때 간략하게 증감 연산자를 사용할 수 있다.</li>
+<li>전위 연산자는 증감된 값이 수식에 반영되고, 후위 연산자는 변경전의 값이 반영된다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>증감 연산자</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>++변수, 변수++</td>
+<td>전위, 후위</td>
+</tr>
+<tr>
+<td>--변수, 변수--</td>
+<td>전위, 후위</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>자료형 연산자</p>
+</blockquote>
+<ul>
+<li><code>typeof</code> 는 자료형 확인에 사용하는 연산자</li>
+<li>자료형에 해당하는 문자열을 반환 (string, number, ...)</li>
+<li>선언하지 않은 변수나 선언했지만 초기값이 할당되지 않은 변수의 자료형은 <code>undefined</code> 이다.</li>
+</ul>
+<h3 id="_7">입력과 출력<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>출력은 <code>alert('message')</code> , 입력은 <code>prompt('message')</code> 를 사용한다.</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>    <span class="kd">var</span> <span class="nx">name</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">(</span><span class="s1">&#39;이름을 입력하세요.&#39;</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">name</span> <span class="o">+</span> <span class="s1">&#39;님 환영합니다.!!!&#39;</span><span class="p">);</span>
+</code></pre></div>
+- <code>prompt()</code> 함수가 반환하는 값은 문자열이다.
+- 불 자료형의 값을 입력 받을 때는 <code>confirm('message')</code> 을 사용한다.</p>
+<div class="highlight"><pre><span></span><code>    <span class="kd">var</span> <span class="nx">ret</span> <span class="o">=</span>  <span class="nx">confirm</span><span class="p">(</span><span class="s1">&#39;종료하시겠습니까?&#39;</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nx">ret</span> <span class="o">+</span> <span class="s1">&#39;선택&#39;</span><span class="p">);</span>
+</code></pre></div>
+
+<h3 id="_8">자료형 변환<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>숫자와 문자열 자료를 더하기 하면 숫자는 문자열로 변환된다.</li>
+<li>
+<p>더하기 이외의 사칙 연산자들이 사용되면 문자열이 숫자로 변환된다.</p>
+</li>
+<li>
+<p>다른 자료형을 숫자 자료형으로 변환하려면 <code>Number()</code> 를 사용한다.</p>
+</li>
+<li>
+<p>변환이 실패하면 <code>NaN</code> 를 반환한다.</p>
+</li>
+<li>
+<p>다른 자료형을 문자 자료형으로 변환하려면 <code>String()</code> 을 사용한다.</p>
+</li>
+<li>
+<p>다른 자료형을 불 자료형으로 변환하려면 <code>Boolena()</code> 을 사용한다.</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="c1">// 항상 false가 되는 경우</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span>          <span class="c1">// false</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">(</span><span class="kc">NaN</span><span class="p">));</span>        <span class="c1">// false</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">));</span>         <span class="c1">// false</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">(</span><span class="kc">null</span><span class="p">));</span>       <span class="c1">// false</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="nb">Boolean</span><span class="p">(</span><span class="kc">undefined</span><span class="p">));</span>  <span class="c1">// false</span>
+</code></pre></div>
+
+<blockquote>
+<p>일치 연산자</p>
+</blockquote>
+<ul>
+<li>비교 연산자를 사용할 때 자료형이 변환되어 의도하지 않은 결과가 나올 수 있다.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="c1">// 모두 true가 된다.</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;&#39;</span> <span class="o">==</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;&#39;</span> <span class="o">==</span> <span class="mi">0</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="mi">0</span> <span class="o">==</span> <span class="kc">false</span><span class="p">);</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;123&#39;</span> <span class="o">==</span> <span class="mi">123</span><span class="p">);</span>
+</code></pre></div>
+
+<ul>
+<li>형 변환을 하지않고 비교하려면 일치 연산자를 사용한다.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>일치 연산자</th>
+<th>설명</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>===</td>
+<td>자료형과 값이 일치</td>
+</tr>
+<tr>
+<td>!==</td>
+<td>불일치</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_9">템플릿 문자열<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ECMAScript 6</strong></li>
+<li>템플릿 문자열은 반드시 (```) 로 감싸야 한다.</li>
+<li>문자열 내부에 변수나 수식을 사용하기 위해 <code>${}</code> 를 사용한다.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="kd">var</span> <span class="nx">age</span> <span class="o">=</span> <span class="nx">prompt</span><span class="p">();</span>
+    <span class="nx">alert</span><span class="p">(</span><span class="sb">`당신의 나이는 </span><span class="si">${</span><span class="nx">age</span><span class="si">}</span><span class="sb"> 입니다.`</span><span class="p">);</span><span class="sb">`</span>
+</code></pre></div>
+
+<h3 id="let-const">let, const<a class="headerlink" href="#let-const" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ECMAScript 6</strong></li>
+<li><code>let</code> 으로 선언한 변수는 해당 스코프에서만 사용이 제한되고, 재선언이 불가하다.</li>
+<li><code>const</code> 로 선언한 변수는 재선언 및 값의 변경이 불가하다.</li>
+<li><code>var</code> 로 선언한 변수는 선언된 위치와 관계없이 전역으로 사용된다.</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../00_intro/" title="start" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                start
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../02_flowcontrol/" title="flow" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                flow
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 JongYun Jung
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.a45f732b.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.c03f0417.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
