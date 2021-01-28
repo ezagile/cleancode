@@ -15,7 +15,7 @@
     
     
       
-        <title>JUnit5 - ezAgile</title>
+        <title>Writing Tests - ezAgile</title>
       
     
     
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              JUnit5
+              Writing Tests
             
           </span>
         </div>
@@ -569,14 +569,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        JUnit5
+        Writing Tests
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="JUnit5" class="md-nav__link md-nav__link--active">
-      JUnit5
+    <a href="./" title="Writing Tests" class="md-nav__link md-nav__link--active">
+      Writing Tests
     </a>
     
       
@@ -599,12 +599,33 @@
     어노테이션들 (Annotations)
   </a>
   
-    <nav class="md-nav" aria-label="어노테이션들 (Annotations)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    테스트 클래스와 테스트 메소드
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-names" class="md-nav__link">
+    Display Names (표시명)
+  </a>
+  
+    <nav class="md-nav" aria-label="Display Names (표시명)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    클래스와 메소드 테스트
+  <a href="#display-name-generators" class="md-nav__link">
+    Display Name Generators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-default-display-name-generators" class="md-nav__link">
+    Setting the Default Display Name Generators
   </a>
   
 </li>
@@ -615,29 +636,106 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    테스트 실행
+  <a href="#assertions" class="md-nav__link">
+    Assertions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    확장 모델
+  <a href="#assumptions" class="md-nav__link">
+    Assumptions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    고급 토픽들
+  <a href="#disabling-tests" class="md-nav__link">
+    Disabling Tests
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#appendix" class="md-nav__link">
-    Appendix
+  <a href="#conditional-test-execution" class="md-nav__link">
+    Conditional Test Execution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagging-and-filtering" class="md-nav__link">
+    Tagging and Filtering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-exectuion-order" class="md-nav__link">
+    Text Exectuion Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-instance-lifecycle" class="md-nav__link">
+    Test Instance Lifecycle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-tests" class="md-nav__link">
+    Nested Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependecncy-injection-for-constructors-and-methods" class="md-nav__link">
+    Dependecncy Injection for Constructors and Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repeated-tests" class="md-nav__link">
+    Repeated Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameterized-tests" class="md-nav__link">
+    Parameterized Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-tests" class="md-nav__link">
+    Dynamic Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeouts" class="md-nav__link">
+    Timeouts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-execution" class="md-nav__link">
+    Parallel Execution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-extensions" class="md-nav__link">
+    Built-in Extensions
   </a>
   
 </li>
@@ -646,6 +744,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../junit5_03/" title="Lab" class="md-nav__link">
+      Lab
+    </a>
   </li>
 
         
@@ -1229,12 +1339,33 @@
     어노테이션들 (Annotations)
   </a>
   
-    <nav class="md-nav" aria-label="어노테이션들 (Annotations)">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    테스트 클래스와 테스트 메소드
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#display-names" class="md-nav__link">
+    Display Names (표시명)
+  </a>
+  
+    <nav class="md-nav" aria-label="Display Names (표시명)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    클래스와 메소드 테스트
+  <a href="#display-name-generators" class="md-nav__link">
+    Display Name Generators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-the-default-display-name-generators" class="md-nav__link">
+    Setting the Default Display Name Generators
   </a>
   
 </li>
@@ -1245,29 +1376,106 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    테스트 실행
+  <a href="#assertions" class="md-nav__link">
+    Assertions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    확장 모델
+  <a href="#assumptions" class="md-nav__link">
+    Assumptions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    고급 토픽들
+  <a href="#disabling-tests" class="md-nav__link">
+    Disabling Tests
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#appendix" class="md-nav__link">
-    Appendix
+  <a href="#conditional-test-execution" class="md-nav__link">
+    Conditional Test Execution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagging-and-filtering" class="md-nav__link">
+    Tagging and Filtering
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#text-exectuion-order" class="md-nav__link">
+    Text Exectuion Order
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-instance-lifecycle" class="md-nav__link">
+    Test Instance Lifecycle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nested-tests" class="md-nav__link">
+    Nested Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dependecncy-injection-for-constructors-and-methods" class="md-nav__link">
+    Dependecncy Injection for Constructors and Methods
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#repeated-tests" class="md-nav__link">
+    Repeated Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parameterized-tests" class="md-nav__link">
+    Parameterized Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-tests" class="md-nav__link">
+    Dynamic Tests
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timeouts" class="md-nav__link">
+    Timeouts
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parallel-execution" class="md-nav__link">
+    Parallel Execution
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#built-in-extensions" class="md-nav__link">
+    Built-in Extensions
   </a>
   
 </li>
@@ -1296,6 +1504,10 @@
 </ul>
 </div>
 <h2 id="annotations">어노테이션들 (Annotations)<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h2>
+<ul>
+<li>JUnit jupter 는 다음 어노테이션들을 지원한다.</li>
+<li>거의 모든 핵심 어노테이션들은 <mark>junit-jupiter-api</mark> 모듈의 <mark>org.junit.jupiter.api</mark> 패키지에 위치한다.</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -1306,79 +1518,79 @@
 <tbody>
 <tr>
 <td align="left"><strong>@Test</strong></td>
-<td align="left">테스트 메소드임을 알린다.</td>
+<td align="left">테스트 메소드임을 알린다. 오버라이딩 되지 않으면 상속된다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@ParameterizedTest</strong></td>
-<td align="left"></td>
+<td align="left">메소드가 parameterized test 임을 알린다. 오버라이딩 되지 않으면 상속된다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@RepeatedTest</strong></td>
-<td align="left"></td>
+<td align="left">메소드가 repeated test를 위한 템플릿임을 알린다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@TestFactory</strong></td>
-<td align="left"></td>
+<td align="left">메소드가 dynamic test를 위한 테스트 팩토리임을 알린다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@TestTemplate</strong></td>
-<td align="left"></td>
+<td align="left">멤소드가 test case 를 위한 템플릿임을 알린다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@TestMethodOrder</strong></td>
-<td align="left"></td>
+<td align="left">테스트 메소드의 실행 순서를 설정하기 위해 사용.</td>
 </tr>
 <tr>
 <td align="left"><strong>@TestInstance</strong></td>
-<td align="left"></td>
+<td align="left">테스트 인스턴스의 라이프 싸이클을 설정하기 위해 사용.</td>
 </tr>
 <tr>
 <td align="left"><strong>@DisplayName</strong></td>
-<td align="left"></td>
+<td align="left">테스트 클래스와 테스트 메소드의 표시명을 선언한다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@DisplayNameGeneration</strong></td>
-<td align="left"></td>
+<td align="left">테스트 클래스에서 display name generator를 선언한다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@BeforeEach</strong></td>
-<td align="left"></td>
+<td align="left">메소드가 각 현재 클래스의 <code>@Test</code> , <code>@RepeatedTest</code>, <code>@ParameterizedTst</code>, 또는 <code>@TestFactory</code> 메소드 전에 실행할 것을 알린다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@AfterEach</strong></td>
-<td align="left"></td>
+<td align="left">이후 실행</td>
 </tr>
 <tr>
 <td align="left"><strong>@BeforeAll</strong></td>
-<td align="left"></td>
+<td align="left">모든 테스트 관련 메소드보다 먼저 실행된다. <strong>per-class</strong> 가 아니면 <strong>static</strong> 이어야 한다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@AfterAll</strong></td>
-<td align="left"></td>
+<td align="left">모든 테스트 메소드 이후에 실행된다. <strong>per-class</strong> 가 아니면 <strong>static</strong> 이어야 한다.</td>
 </tr>
 <tr>
 <td align="left"><strong>@Nested</strong></td>
-<td align="left"></td>
+<td align="left">non-static 네스티드 테스트 클래스.</td>
 </tr>
 <tr>
 <td align="left"><strong>@Tag</strong></td>
-<td align="left"></td>
+<td align="left">필터링(filtering) 테스트를 위한 태그 선언. (클래스나 테스트 레벨에서)</td>
 </tr>
 <tr>
 <td align="left"><strong>@Disabled</strong></td>
-<td align="left"></td>
+<td align="left">테스트 클래스나 메소드를 비활성화.</td>
 </tr>
 <tr>
 <td align="left"><strong>@Timeout</strong></td>
-<td align="left"></td>
+<td align="left">테스트, 테스트 팩토리, 테스트 템플릿, 라이프싸이클 메소드가 시간을 초과하면 실패.</td>
 </tr>
 <tr>
 <td align="left"><strong>@ExtendWith</strong></td>
-<td align="left"></td>
+<td align="left">Used to register extensions declaratively.</td>
 </tr>
 <tr>
 <td align="left"><strong>@RegisterExtension</strong></td>
-<td align="left"></td>
+<td align="left">Used to register extensions programmatically via fields.</td>
 </tr>
 <tr>
 <td align="left"><strong>@TempDir</strong></td>
@@ -1386,7 +1598,38 @@
 </tr>
 </tbody>
 </table>
-<h3 id="_1">클래스와 메소드 테스트<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<ul>
+<li>JUnit Jupiter 어노테이션들은 <strong>meta-annotaions</strong> 으로 사용될 수 있다.</li>
+<li>따라서, meta-annotation의 시맨틱을 상속하는 composed annotation 을 정의할 수 있다.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">java.lang.annotation.ElementType</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.Retention</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.RetentionPolicy</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">java.lang.annotation.Target</span><span class="p">;</span>
+
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Tag</span><span class="p">;</span>
+
+<span class="nd">@Target</span><span class="p">({</span> <span class="n">ElementType</span><span class="p">.</span><span class="na">TYPE</span><span class="p">,</span> <span class="n">ElementType</span><span class="p">.</span><span class="na">METHOD</span> <span class="p">})</span>
+<span class="nd">@Retention</span><span class="p">(</span><span class="n">RetentionPolicy</span><span class="p">.</span><span class="na">RUNTIME</span><span class="p">)</span>
+<span class="nd">@Tag</span><span class="p">(</span><span class="s">&quot;fast&quot;</span><span class="p">)</span>
+<span class="kd">public</span> <span class="nd">@interface</span> <span class="n">Fast</span> <span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li>다음 <code>@Test</code> 메소드에  <code>@Fast</code> 어노테이션을 사용한다.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nd">@Fast</span>
+<span class="nd">@Test</span>
+<span class="kt">void</span> <span class="nf">myFastTest</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+</div>
+<h2 id="_1">테스트 클래스와 테스트 메소드<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p><strong>Test Class</strong> : 최상위 수준의 클래스, <code>static</code> 멤버 클래스, 또는 하나의 테스트 메소드를 포함하는 <code>@Nested</code> 클래스</p>
@@ -1408,7 +1651,6 @@
 <li>Test method 와 lifecycle method 는 <code>abstract</code> 일 수 없고, 반환값을 가질 수 없다.</li>
 </ul>
 </div>
-<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">java</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="kn">import static</span> <span class="nn">org.junit.jupiter.api.Assertions.fail</span><span class="p">;</span>
 <span class="kn">import static</span> <span class="nn">org.junit.jupiter.api.Assumptions.assumeTrue</span><span class="p">;</span>
 
@@ -1460,22 +1702,159 @@
 <span class="p">}</span>
 </code></pre></div>
 
-</div>
-<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">C++</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>
+<h2 id="display-names">Display Names (표시명)<a class="headerlink" href="#display-names" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.junit.jupiter.api.DisplayName</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="p">;</span>
+
+<span class="nd">@DisplayName</span><span class="p">(</span><span class="s">&quot;A special test case&quot;</span><span class="p">)</span>
+<span class="kd">class</span> <span class="nc">DisplayNameDemo</span> <span class="p">{</span>
+
+    <span class="nd">@Test</span>
+    <span class="nd">@DisplayName</span><span class="p">(</span><span class="s">&quot;Custom test name containing spaces&quot;</span><span class="p">)</span>
+    <span class="kt">void</span> <span class="nf">testWithDisplayNameContainingSpaces</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="nd">@DisplayName</span><span class="p">(</span><span class="s">&quot;╯°□°）╯&quot;</span><span class="p">)</span>
+    <span class="kt">void</span> <span class="nf">testWithDisplayNameContainingSpecialCharacters</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+
+    <span class="nd">@Test</span>
+    <span class="nd">@DisplayName</span><span class="p">(</span><span class="s">&quot;😱&quot;</span><span class="p">)</span>
+    <span class="kt">void</span> <span class="nf">testWithDisplayNameContainingEmoji</span><span class="p">()</span> <span class="p">{</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
 </code></pre></div>
 
-</div>
-<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">python</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code>
+<h3 id="display-name-generators">Display Name Generators<a class="headerlink" href="#display-name-generators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>JUnit Jupiter는 <code>@DisaplayNameGeneration</code> 으로  custom 표시명 생성기를 지원한다.</li>
+<li>Generator 들은 <code>DisplayNameGenerator</code> 를 implement 해서 생성.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">Display Name Generators</th>
+<th align="left">동작</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Standard</td>
+<td align="left">표준 표시명 생성.</td>
+</tr>
+<tr>
+<td align="left">Simple</td>
+<td align="left">매개변수가 없는 메소드의 괄호를 제거.</td>
+</tr>
+<tr>
+<td align="left">ReplaceUnderScore</td>
+<td align="left">공백은 <code>_</code> (underscore)로 교체.</td>
+</tr>
+<tr>
+<td align="left">IndicativeSentence</td>
+<td align="left">테스트 이름과 클래스 이름을 연결해서 문장(sentence)으로 생성.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>@IndicativeSentencesGeneration</code> 을 사용해서 분리자(separator)와 생성기(gerator)를 커스터마이징한 예제.</li>
+</ul>
+<p><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.junit.jupiter.api.DisplayName</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.DisplayNameGeneration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.DisplayNameGenerator</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.IndicativeSentencesGeneration</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Nested</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.params.ParameterizedTest</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.params.provider.ValueSource</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nc">DisplayNameGeneratorDemo</span> <span class="p">{</span>
+
+    <span class="nd">@Nested</span>
+    <span class="nd">@DisplayNameGeneration</span><span class="p">(</span><span class="n">DisplayNameGenerator</span><span class="p">.</span><span class="na">ReplaceUnderscores</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+    <span class="kd">class</span> <span class="nc">A_year_is_not_supported</span> <span class="p">{</span>
+
+        <span class="nd">@Test</span>
+        <span class="kt">void</span> <span class="nf">if_it_is_zero</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">}</span>
+
+        <span class="nd">@DisplayName</span><span class="p">(</span><span class="s">&quot;A negative value for year is not supported by the leap year computation.&quot;</span><span class="p">)</span>
+        <span class="nd">@ParameterizedTest</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;For example, year {0} is not supported.&quot;</span><span class="p">)</span>
+        <span class="nd">@ValueSource</span><span class="p">(</span><span class="n">ints</span> <span class="o">=</span> <span class="p">{</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span> <span class="p">})</span>
+        <span class="kt">void</span> <span class="nf">if_it_is_negative</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nd">@Nested</span>
+    <span class="nd">@IndicativeSentencesGeneration</span><span class="p">(</span><span class="n">separator</span> <span class="o">=</span> <span class="s">&quot; -&gt; &quot;</span><span class="p">,</span> <span class="n">generator</span> <span class="o">=</span> <span class="n">DisplayNameGenerator</span><span class="p">.</span><span class="na">ReplaceUnderscores</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
+    <span class="kd">class</span> <span class="nc">A_year_is_a_leap_year</span> <span class="p">{</span>
+
+        <span class="nd">@Test</span>
+        <span class="kt">void</span> <span class="nf">if_it_is_divisible_by_4_but_not_by_100</span><span class="p">()</span> <span class="p">{</span>
+        <span class="p">}</span>
+
+        <span class="nd">@ParameterizedTest</span><span class="p">(</span><span class="n">name</span> <span class="o">=</span> <span class="s">&quot;Year {0} is a leap year.&quot;</span><span class="p">)</span>
+        <span class="nd">@ValueSource</span><span class="p">(</span><span class="n">ints</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2020</span><span class="p">,</span> <span class="mi">2048</span> <span class="p">})</span>
+        <span class="kt">void</span> <span class="nf">if_it_is_one_of_the_following_years</span><span class="p">(</span><span class="kt">int</span> <span class="n">year</span><span class="p">)</span> <span class="p">{</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+- 출력 결과</p>
+<div class="highlight"><pre><span></span><code><span class="go">+-- DisplayNameGeneratorDemo [OK]</span>
+<span class="go">  +-- A year is not supported [OK]</span>
+<span class="go">  | +-- A negative value for year is not supported by the leap year computation. [OK]</span>
+<span class="go">  | | +-- For example, year -1 is not supported. [OK]</span>
+<span class="go">  | | &#39;-- For example, year -4 is not supported. [OK]</span>
+<span class="go">  | &#39;-- if it is zero() [OK]</span>
+<span class="go">  &#39;-- A year is a leap year [OK]</span>
+<span class="go">    +-- A year is a leap year -&gt; if it is divisible by 4 but not by 100. [OK]</span>
+<span class="go">    &#39;-- A year is a leap year -&gt; if it is one of the following years. [OK]</span>
+<span class="go">      +-- Year 2016 is a leap year. [OK]</span>
+<span class="go">      +-- Year 2020 is a leap year. [OK]</span>
+<span class="go">      &#39;-- Year 2048 is a leap year. [OK]</span>
 </code></pre></div>
 
+<h3 id="setting-the-default-display-name-generators">Setting the Default Display Name Generators<a class="headerlink" href="#setting-the-default-display-name-generators" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>junit.jupiter.displayname.generator.default</code> 의 설정 파라미터(configuration parameter) 사용</p>
+</li>
+<li>
+<p><code>src/test/resources/junit-platform.properties</code></p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code>junit.jupiter.displayname.generator.default = \
+    org.junit.jupiter.api.DisplayNameGenerator$ReplaceUnderscores
+</code></pre></div>
+
+<div class="admonition info">
+<p class="admonition-title">display name 우선순위</p>
+<ol>
+<li>만약 있다면, <code>@DisplayName</code> annotation 의 값</li>
+<li>만약 있다면, <code>@DisplayNameGeneration</code> annotation에 기술된 <code>DisplayNameGenerator</code> 를 호출</li>
+<li>만약 있다면, configuration parameter 로 설정된 <code>default DisplayNameGenerator</code> 호출</li>
+<li><code>org.junit.jupiter.api.DisplayNameGenerator.Standard</code> 호출</li>
+</ol>
 </div>
-</div>
-<h2 id="_2">테스트 실행<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h2 id="_3">확장 모델<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<h2 id="_4">고급 토픽들<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<h2 id="appendix">Appendix<a class="headerlink" href="#appendix" title="Permanent link">&para;</a></h2>
+<h2 id="assertions">Assertions<a class="headerlink" href="#assertions" title="Permanent link">&para;</a></h2>
+<h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">&para;</a></h2>
+<h2 id="disabling-tests">Disabling Tests<a class="headerlink" href="#disabling-tests" title="Permanent link">&para;</a></h2>
+<h2 id="conditional-test-execution">Conditional Test Execution<a class="headerlink" href="#conditional-test-execution" title="Permanent link">&para;</a></h2>
+<h2 id="tagging-and-filtering">Tagging and Filtering<a class="headerlink" href="#tagging-and-filtering" title="Permanent link">&para;</a></h2>
+<h2 id="text-exectuion-order">Text Exectuion Order<a class="headerlink" href="#text-exectuion-order" title="Permanent link">&para;</a></h2>
+<h2 id="test-instance-lifecycle">Test Instance Lifecycle<a class="headerlink" href="#test-instance-lifecycle" title="Permanent link">&para;</a></h2>
+<h2 id="nested-tests">Nested Tests<a class="headerlink" href="#nested-tests" title="Permanent link">&para;</a></h2>
+<h2 id="dependecncy-injection-for-constructors-and-methods">Dependecncy Injection for Constructors and Methods<a class="headerlink" href="#dependecncy-injection-for-constructors-and-methods" title="Permanent link">&para;</a></h2>
+<h2 id="repeated-tests">Repeated Tests<a class="headerlink" href="#repeated-tests" title="Permanent link">&para;</a></h2>
+<h2 id="parameterized-tests">Parameterized Tests<a class="headerlink" href="#parameterized-tests" title="Permanent link">&para;</a></h2>
+<h2 id="dynamic-tests">Dynamic Tests<a class="headerlink" href="#dynamic-tests" title="Permanent link">&para;</a></h2>
+<h2 id="timeouts">Timeouts<a class="headerlink" href="#timeouts" title="Permanent link">&para;</a></h2>
+<h2 id="parallel-execution">Parallel Execution<a class="headerlink" href="#parallel-execution" title="Permanent link">&para;</a></h2>
+<h2 id="built-in-extensions">Built-in Extensions<a class="headerlink" href="#built-in-extensions" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>참고</p>
 </blockquote>
@@ -1520,13 +1899,13 @@
           </a>
         
         
-          <a href="../../effcpp/01_mingw/" title="MinGW" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../junit5_03/" title="Lab" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MinGW
+                Lab
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
