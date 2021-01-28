@@ -40,7 +40,8 @@ nav:
             - 'Cpp + Googl test + Visual Studio 2017': tdd/gtest_vstudio.md
         - 'JUnit': 
             - 'JUnit 소개': tdd/junit5_01.md
-            - 'JUnit5': tdd/junit5_02.md
+            - 'Writing Tests': tdd/junit5_02.md 
+            - 'Lab': tdd/junit5_03.md
         - 'GTest':
             - 'MinGW': effcpp/01_mingw.md
             - 'MinGW + GTest': effcpp/02_gtest_setup.md

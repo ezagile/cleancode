@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        
+        <!-- 자바스크립트 코드 작성하는 부분 -->
+        <script>
+            //--------------------------------------
+            /*
+            var 함수이름 = function() {
+            var ret = prompt('정수 입력:');
+                alert(ret)
+            }
+            함수이름();                 // 함수 호출
+
+            alert(함수이름);            // function 내용 출력
+            alert(prompt);             // function prompt() { [native code]} 라고만 출력
+            */
+            //--------------------------------------
+            /*
+            function func(a, b, c){
+                alert(a, b);        // b는 무시됨
+                alert(c);           // c는 undefined
+            }
+            
+            func(10, 20);
+            */
+            //--------------------------------------
+            function func(){
+                alert(arguments);                           // [object arguments] 출력
+                alert(typeof(arguments) + '-->' + arguments.length);     // object-->4 출력
+            }
+            func(1, 2, 3, 4);
+
+
+        </script>            
+        
+    </head>
+    <body>
+        
+    </body>
+</html>
