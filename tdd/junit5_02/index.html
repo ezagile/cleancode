@@ -1501,6 +1501,7 @@
 <p class="admonition-title">Info</p>
 <ul>
 <li>Java 의 <strong>Annotation</strong> 에 관해서는 간략한 <a href="../../effjava/annotation/">소개글</a> 을 참고하시오.</li>
+<li>JUnit 의 내용은 <a href="https://junit.org/junit5/docs/current/user-guide">Junit User Guide</a> 를 참고하여 작성하였다.</li>
 </ul>
 </div>
 <h2 id="annotations">어노테이션들 (Annotations)<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h2>
@@ -1847,6 +1848,13 @@
 <h2 id="tagging-and-filtering">Tagging and Filtering<a class="headerlink" href="#tagging-and-filtering" title="Permanent link">&para;</a></h2>
 <h2 id="text-exectuion-order">Text Exectuion Order<a class="headerlink" href="#text-exectuion-order" title="Permanent link">&para;</a></h2>
 <h2 id="test-instance-lifecycle">Test Instance Lifecycle<a class="headerlink" href="#test-instance-lifecycle" title="Permanent link">&para;</a></h2>
+<div class="admonition info">
+<p class="admonition-title"><a class="magiclink magiclink-github magiclink-mention" href="https://github.com/BeforeAll" title="GitHub User: BeforeAll">@BeforeAll</a>, <a class="magiclink magiclink-github magiclink-mention" href="https://github.com/Afterall" title="GitHub User: Afterall">@Afterall</a></p>
+<ul>
+<li><code>@BeforeAll</code> , <code>@Afterall</code> 을 사용한 테스트 메소드들은 반드시 <strong>static</strong> 이어야 한다.</li>
+<li><code>@BeforeEach</code>, <code>@AfterEach</code> 에 static 이면 안된다.</li>
+</ul>
+</div>
 <h2 id="nested-tests">Nested Tests<a class="headerlink" href="#nested-tests" title="Permanent link">&para;</a></h2>
 <h2 id="dependecncy-injection-for-constructors-and-methods">Dependecncy Injection for Constructors and Methods<a class="headerlink" href="#dependecncy-injection-for-constructors-and-methods" title="Permanent link">&para;</a></h2>
 <h2 id="repeated-tests">Repeated Tests<a class="headerlink" href="#repeated-tests" title="Permanent link">&para;</a></h2>
