@@ -2,6 +2,7 @@
 
 !!! info
     - Java 의 **Annotation** 에 관해서는 간략한 [소개글](../effjava/annotation.md) 을 참고하시오.
+    - JUnit 의 내용은 [Junit User Guide](https://junit.org/junit5/docs/current/user-guide) 를 참고하여 작성하였다.
 
 ## 어노테이션들 (Annotations)
 
@@ -264,7 +265,14 @@ junit.jupiter.displayname.generator.default = \
 
 ## Text Exectuion Order
 
+
+
 ## Test Instance Lifecycle
+
+!!! info "@BeforeAll, @Afterall"
+
+    - ``@BeforeAll`` , ``@Afterall`` 을 사용한 테스트 메소드들은 반드시 **static** 이어야 한다.
+    - ``@BeforeEach``, ``@AfterEach`` 에 static 이면 안된다.
 
 ## Nested Tests
 

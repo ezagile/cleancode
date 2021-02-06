@@ -18,7 +18,7 @@ Java
     |Java 1.9                          ||
 
 
-[java8_Tutorial]: https://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html  
+[java8_Tutorial]: https://docs.oracle.com/javase/tutorial/java
 [java14]: https://docs.oracle.com/en/java/javase/14/language/toc.htm
 
 

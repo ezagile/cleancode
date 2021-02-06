@@ -39,7 +39,7 @@ $ mkdocs gh-deploy
 ```sh
 $ git add .
 $ git commit -m "코멘트"
-$git push
+$ git push
 ```
 
 
