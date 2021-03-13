@@ -254,22 +254,239 @@ junit.jupiter.displayname.generator.default = \
 
 ## Assertions
 
+- JUnit 4 의 assertoin 메소드들을 포함해서 Java 8 람다를 사용하는 메소드들이 추가되었다.
+
+| 메소드들                        |    설명                                                      |
+|:---------------------------------|:-------------------------------------------------------------|
+| assertEquals(), assertTrue()     | Standard Assertions                                           |
+| assertAll(Executable...), assertAll(String, Executable...), assertAll(Collection), assertAll(String, Collection), assertAll(Stream)                     | Group assertions - 모든 assertions 실행, 모든 faili일 보고된다. |
+| \<T extends Throwable> T assertThrows​(Class<T> expectedType, Executable executable)| |
+| assertTimeout(ofMinutes(2), () -> {  Perform task that takes less than 2 minutes. }); || 
+
+- Third-party Assertion Libraries
+
+    - AsertJ, Hamcrest, Truth
+
+
 ## Assumptions
+- org.junit.jupiter.api.Assumptions 클래스의 **static** 메소드들
+
+| 메소드들                        |    설명                                                      |
+|:---------------------------------|:-------------------------------------------------------------|
+| assumeTrue(assumption), assumeFalse() | |
+| assumeTrue(assumption or BooleanSupplier, message or messageSupplier), assumeFalse() | |
+| assumingThat(assumption or BooleanSupplier) | | 
+| assumingThat(assumption or BooleanSupplier, executable) | | 
 
 
 ## Disabling Tests
 
+- 전체 테스트 클래스나 개별 테스트 메소드들에 ``@Disalbed`` 어노테이션을 사용하면 불능상태가 된다.
+
+``` Java
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.Test;
+
+class DisabledTestsDemo {
+
+    @Disabled("Disabled until bug #42 has been resolved")
+    @Test
+    void testWillBeSkipped() {
+    }
+
+    @Test
+    void testWillBeExecuted() {
+    }
+
+}
+```
+
 ## Conditional Test Execution
+
+#### Operating System Conditions
+
+- ``@EnabledOnOs`` , ``@DisaabledOnOs``
+
+``` Java
+@Test
+@EnabledOnOs(MAC)
+void onlyOnMacOs() {
+    // ...
+}
+
+@TestOnMac
+void testOnMac() {
+    // ...
+}
+
+@Test
+@EnabledOnOs({ LINUX, MAC })
+void onLinuxOrMac() {
+    // ...
+}
+
+@Test
+@DisabledOnOs(WINDOWS)
+void notOnWindows() {
+    // ...
+}
+
+@Target(ElementType.METHOD)
+@Retention(RetentionPolicy.RUNTIME)
+@Test
+@EnabledOnOs(MAC)
+@interface TestOnMac {
+}
+```
+
+#### JRE conditions
+
+- ``@EnabledOnJre`` , ``@DisabledOnJre`` , ``@EnabledForJreRange`` , ``@DisabledForJreRange``
+
+``` Java
+@Test
+@EnabledOnJre(JAVA_8)
+void onlyOnJava8() {
+    // ...
+}
+
+@Test
+@EnabledOnJre({ JAVA_9, JAVA_10 })
+void onJava9Or10() {
+    // ...
+}
+
+@Test
+@EnabledForJreRange(min = JAVA_9, max = JAVA_11)
+void fromJava9to11() {
+    // ...
+}
+
+@Test
+@EnabledForJreRange(min = JAVA_9)
+void fromJava9toCurrentJavaFeatureNumber() {
+    // ...
+}
+
+@Test
+@EnabledForJreRange(max = JAVA_11)
+void fromJava8To11() {
+    // ...
+}
+
+@Test
+@DisabledOnJre(JAVA_9)
+void notOnJava9() {
+    // ...
+}
+
+@Test
+@DisabledForJreRange(min = JAVA_9, max = JAVA_11)
+void notFromJava9to11() {
+    // ...
+}
+
+@Test
+@DisabledForJreRange(min = JAVA_9)
+void notFromJava9toCurrentJavaFeatureNumber() {
+    // ...
+}
+
+@Test
+@DisabledForJreRange(max = JAVA_11)
+void notFromJava8to11() {
+    // ...
+}
+```
+
+#### System Property Conditions
+
+- ``@EnabledIfSystemProperty`` ,  ``@DisabledIfSystemProperty``
+
+``` Java
+@Test
+@EnabledIfSystemProperty(named = "os.arch", matches = ".*64.*")
+void onlyOn64BitArchitectures() {
+    // ...
+}
+
+@Test
+@DisabledIfSystemProperty(named = "ci-server", matches = "true")
+void notOnCiServer() {
+    // ...
+}
+```
+
+#### Environment Varialbe Conditions
+
+- ``@EnabledIfEnvironmentVariable`` ,  ``@DisabledIfEnvironmentVariable``
+
+``` Java
+@Test
+@EnabledIfEnvironmentVariable(named = "ENV", matches = "staging-server")
+void onlyOnStagingServer() {
+    // ...
+}
+
+@Test
+@DisabledIfEnvironmentVariable(named = "ENV", matches = ".*development.*")
+void notOnDeveloperWorkstation() {
+    // ...
+}
+```
 
 ## Tagging and Filtering
 
-## Text Exectuion Order
+- 테스트 클래스들과 메소드들은 ``@Tag`` 어노테이션들로 태그될 수 있다.
+- 태그들은 필터에 사용될 수 있다.
 
 
+
+## Test Exectuion Order
+- 실행 순서를 제어하기 위해 클래스나 인터페이스에 ``@TestMethodOrder`` 를 사용하거나 원하는 **MethodOrderer** Implementation 을 명시할 수 있다.
+- 내장된 MethodOrderer 를 사용하거나 자신만의 MethodOrderer 를 구현할 수 있다.
+
+> Built-in MethodOrderer
+
+- DisplayName
+- MethodName
+- OrderAnnotation : ``@Order``
+- Random
+- Alphaaaanumeric
+
+``` Java
+import org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+
+@TestMethodOrder(OrderAnnotation.class)
+class OrderedTestsDemo {
+
+    @Test
+    @Order(1)
+    void nullValues() {
+        // perform assertions against null values
+    }
+
+    @Test
+    @Order(2)
+    void emptyValues() {
+        // perform assertions against empty values
+    }
+
+    @Test
+    @Order(3)
+    void validValues() {
+        // perform assertions against valid values
+    }
+
+}
+```
 
 ## Test Instance Lifecycle
 
-!!! info "@BeforeAll, @Afterall"
+!!! info 
 
     - ``@BeforeAll`` , ``@Afterall`` 을 사용한 테스트 메소드들은 반드시 **static** 이어야 한다.
     - ``@BeforeEach``, ``@AfterEach`` 에 static 이면 안된다.
@@ -278,15 +495,198 @@ junit.jupiter.displayname.generator.default = \
 
 ## Dependecncy Injection for Constructors and Methods
 
+## Test Interfaces and Default Methods
+
 ## Repeated Tests
 
+- 원하는 만큼 메소드를 반복 실행하려면 ``@RepeatedTest`` 와 횟수를 기술한다.
+
+``` Java
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import java.util.logging.Logger;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
+import org.junit.jupiter.api.RepetitionInfo;
+import org.junit.jupiter.api.TestInfo;
+
+class RepeatedTestsDemo {
+
+    private Logger logger = // ...
+
+    @BeforeEach
+    void beforeEach(TestInfo testInfo, RepetitionInfo repetitionInfo) {
+        int currentRepetition = repetitionInfo.getCurrentRepetition();
+        int totalRepetitions = repetitionInfo.getTotalRepetitions();
+        String methodName = testInfo.getTestMethod().get().getName();
+        logger.info(String.format("About to execute repetition %d of %d for %s", //
+            currentRepetition, totalRepetitions, methodName));
+    }
+
+    @RepeatedTest(10)
+    void repeatedTest() {
+        // ...
+    }
+
+    @RepeatedTest(5)
+    void repeatedTestWithRepetitionInfo(RepetitionInfo repetitionInfo) {
+        assertEquals(5, repetitionInfo.getTotalRepetitions());
+    }
+
+    @RepeatedTest(value = 1, name = "{displayName} {currentRepetition}/{totalRepetitions}")
+    @DisplayName("Repeat!")
+    void customDisplayName(TestInfo testInfo) {
+        assertEquals("Repeat! 1/1", testInfo.getDisplayName());
+    }
+
+    @RepeatedTest(value = 1, name = RepeatedTest.LONG_DISPLAY_NAME)
+    @DisplayName("Details...")
+    void customDisplayNameWithLongPattern(TestInfo testInfo) {
+        assertEquals("Details... :: repetition 1 of 1", testInfo.getDisplayName());
+    }
+
+    @RepeatedTest(value = 5, name = "Wiederholung {currentRepetition} von {totalRepetitions}")
+    void repeatedTestInGerman() {
+        // ...
+    }
+
+}
+```
+
 ## Parameterized Tests
+
+- 다른 인자 값들을 사용해서 테스트를 여러번 수행하기 위해 사용한다.
+-  ``@ParameterizedTest`` 어노테이션을 사용.
+
+``` Java
+@ParameterizedTest
+@ValueSource(strings = { "racecar", "radar", "able was I ere I saw elba" })
+void palindromes(String candidate) {
+    assertTrue(StringUtils.isPalindrome(candidate));
+}
+```
+
+- ==junit-jupiter-params== artifact 에 대한 의존성(dependency)을 추가해야 한다.
+
+#### Consuming Arguments
+    - Zero or more indexed arguments must be declared first.
+    - Zero or more aggregators must be declared next.
+    - Zero or more arguments supplied by a ParameterResolver must be declared last.
+
+### Source of Arguments
+-  ``@ValueSource`` 
+
+    - short, byte, int, long, flaot, double, char, boolean, java.lang.String, lava.lang.Class
+
+``` Java
+@ParameterizedTest
+@ValueSource(ints = { 1, 2, 3 })
+void testWithValueSource(int argument) {
+    assertTrue(argument > 0 && argument < 4);
+}
+```
+> NULL and Empty Sources
+
+- ``@NullSource``
+- ``@EmptySource``
+- ``@NullAndEmptySource``
+
+``` Java
+@ParameterizedTest
+@NullSource
+@EmptySource
+@ValueSource(strings = { " ", "   ", "\t", "\n" })
+void nullEmptyAndBlankStrings(String text) {
+    assertTrue(text == null || text.trim().isEmpty());
+}
+```
+
+> @EnumSource
+
+
+> @MethodSource
+
+> @CsvSource
+
+> @CsvFileSource
+
+> @ArgumentSource
+
+
+#### Argument Covnersion
+
+- Implicit Conversion
+
+
+- Explicit Conversion
+
+
+#### Argument Aggregation
 
 ## Dynamic Tests
 
 ## Timeouts
 
+- ``@Timeout`` 어노테이션은 test, tst factory, test template, 또는 lifecycle 메소드들이 주어진 시간을 초과하면 fail이 되게 한다.
+
+``` java
+class TimeoutDemo {
+
+    @BeforeEach
+    @Timeout(5)
+    void setUp() {
+        // fails if execution time exceeds 5 seconds
+    }
+
+    @Test
+    @Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
+    void failsIfExecutionTimeExceeds100Milliseconds() {
+        // fails if execution time exceeds 100 milliseconds
+    }
+
+}
+```
+
+- 전역(global)으로 timeout 을 설정하려면 다음 설정 파라미터들을 사용한다.
+
+    junit.jupiter.execution.timeout.default
+    Default timeout for all testable and lifecycle methods
+
+    junit.jupiter.execution.timeout.testable.method.default
+    Default timeout for all testable methods
+
+    junit.jupiter.execution.timeout.test.method.default
+    Default timeout for @Test methods
+
+    junit.jupiter.execution.timeout.testtemplate.method.default
+    Default timeout for @TestTemplate methods
+
+    junit.jupiter.execution.timeout.testfactory.method.default
+    Default timeout for @TestFactory methods
+
+    junit.jupiter.execution.timeout.lifecycle.method.default
+    Default timeout for all lifecycle methods
+
+    junit.jupiter.execution.timeout.beforeall.method.default
+    Default timeout for @BeforeAll methods
+
+    junit.jupiter.execution.timeout.beforeeach.method.default
+    Default timeout for @BeforeEach methods
+
+    junit.jupiter.execution.timeout.aftereach.method.default
+    Default timeout for @AfterEach methods
+
+    junit.jupiter.execution.timeout.afterall.method.default
+    Default timeout for @AfterAll methods
+
 ## Parallel Execution
+
+- 기본적으로, Junit Jupiter 테스트들은 하나의 스레드에 의해 순차적으로 실행된다.
+- 병렬 실행으로 위해서 **junit.jupiter.execution.parallel.enabled** 파라미터를 **True** 로 설정한다.
+
+
 
 ## Built-in Extensions
 

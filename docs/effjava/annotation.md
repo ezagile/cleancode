@@ -1,5 +1,10 @@
 # Annotations
 
+!!! info
+    - [Java 8 Langage 관련 튜토리얼 문서의 Annotations][java8_Tutorial_annotation]을 참고하였다.
+
+[java8_Tutorial_annotation]: https://docs.oracle.com/javase/tutorial/java/annotations/index.html
+
 
 **어노테이션(Annotation)** 은 프로그램의 일부는 아니지만 프로그램에 대한 정보를 제공하는 **메타데이타** 의 한 형태이다.
 어노테이션이 추가된 코드의 동작에 어떤 영향도 주지 않는다.
@@ -138,19 +143,83 @@ public class TestClass extends TestSuperClass{
 ## 사전 정의 어노테이션
 
 - __@Deprecated__
+
+``` Java
+// Javadoc comment follows
+/**
+    * @deprecated
+    * explanation of why it was deprecated
+    */
+@Deprecated
+static void deprecatedMethod() { }
+```
+
 - __@Override__
+
+``` Java
+// mark method as a superclass method
+// that has been overridden
+@Override 
+int overriddenMethod() { }
+```
+
 - __@SupressWarnings__
+
+``` Java
+// use a deprecated method and tell 
+   // compiler not to generate a warning
+   @SuppressWarnings("deprecation")
+    void useDeprecatedMethod() {
+        // deprecation warning
+        // - suppressed
+        objectOne.deprecatedMethod();
+    }
+```
+
 - __@SafeVarargs__
 - __@Functionalface__
 
-다른 어노테이션들에 적용되는 어노테이션들
+### 다른 어노테이션들에 적용되는 어노테이션들
 
-- __@Retentino__
-- __@Documented__
-- __@Target__
-- __@Inherited__
-- __@Repeatable__
+다른 어노테이션에 적용되는 어노테이션들을 **meta-annotations** 이라 한다. 메타 어노테이션들은 ==java.lang.annoation== 에 정의되어 있다.
 
+- __@Retention__ : 어노테이션이 어떻게 저장되는지를 기술한다.
+    - RetentionPolicy.SOURCE
+    - RetentionPolicy.CLASS
+    - RetentionPolicy.RUNTIME
+
+- __@Documented__ : 어노테이션들이 사용될 때마다, Javadoc 에 의해 문서화되어야 함을 지시한다.
+
+- __@Target__ : 어노테이션이 적용되는 Java 요소들의 종류를 제한하기 위해 사용한다.
+
+    - ElementType.ANNOTATION_TYPE
+    - ElementType.CONSTRUCTOR
+    - ElementType.FIELD
+    - ElementType.LOCAL
+    - ElementType.METHOD
+    - ElementType.PACKAGE
+    - ElementType.PARAMETER
+    - ElementType.TYPE
+
+- __@Inherited__ : 어노테이션 타입이 상속될 수 있음을 나타낸다. 클래스 선언에만 사용된다.
+
+- __@Repeatable__ : 어노테이션이 여러번 적용될 수 있음을 나타낸다.
+
+``` java
+@Schedule(dayOfMonth="last")
+@Schedule(dayOfWeek="Fri", hour="23")
+public void doPeriodicCleanup() { ... }
+//----------------------------------------
+import java.lang.annotation.Repeatable;
+
+@Repeatable(Schedules.class)
+public @interface Schedule {
+  String dayOfMonth() default "first";
+  String dayOfWeek() default "Mon";
+  int hour() default 12;
+}
+
+```
 
 ## 어노테이션 타입과 플러거블 타입 시스템
 

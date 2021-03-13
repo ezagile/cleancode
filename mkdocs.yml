@@ -41,7 +41,10 @@ nav:
         - 'JUnit': 
             - 'JUnit 소개': tdd/junit5_01.md
             - 'Writing Tests': tdd/junit5_02.md 
-            - 'Lab': tdd/junit5_03.md
+            - 'AporovalTest': tdd/junit5_03.md
+            - 'Hamcrest': tdd/hamcrest.md
+            - 'Mockito':
+                - '기초': tdd/mockito_1.md
         - 'GTest':
             - 'MinGW': effcpp/01_mingw.md
             - 'MinGW + GTest': effcpp/02_gtest_setup.md
@@ -50,13 +53,16 @@ nav:
             - 'Gtest Adv1': effcpp/05_gtest2.md
             - 'Approval': effcpp/90_approvaltest.md
             - 'Approval + gtest': effcpp/91_gtestapproval.md
-            - 'CMake': effcpp/99_cmake.md            
+            - 'CMake': effcpp/99_cmake.md                    
     - C++:
             - 'lambda': moderncpp/lambda.md
     - JAVA:
         - 'New in Java': effjava/intro.md
         - 'Annotations': effjava/annotation.md
+        - 'Stream': effjava/stream.md
+        - 'Aggregate': effjava/aggregate.md
         - 'Lambda': effjava/lambda.md
+        - 'Optional': effjava/optional.md
         - 'Module': effjava/module.md
     - Web:
         - 'HTML':
