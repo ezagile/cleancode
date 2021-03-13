@@ -15,7 +15,7 @@
     
     
       
-        <title>Lab - ezAgile</title>
+        <title>AporovalTest - ezAgile</title>
       
     
     
@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#junit5" class="md-skip">
+        <a href="#approval-test" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Lab
+              AporovalTest
             
           </span>
         </div>
@@ -579,14 +579,14 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Lab
+        AporovalTest
         <span class="md-nav__icon md-icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
         </span>
       </label>
     
-    <a href="./" title="Lab" class="md-nav__link md-nav__link--active">
-      Lab
+    <a href="./" title="AporovalTest" class="md-nav__link md-nav__link--active">
+      AporovalTest
     </a>
     
       
@@ -603,8 +603,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#junit5" class="md-nav__link">
-    JUnit5 예제
+  <a href="#approval-test" class="md-nav__link">
+    Approval Test
   </a>
   
 </li>
@@ -613,6 +613,60 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../hamcrest/" title="Hamcrest" class="md-nav__link">
+      Hamcrest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-5" type="checkbox" id="nav-3-3-5">
+    
+    <label class="md-nav__link" for="nav-3-3-5">
+      Mockito
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Mockito" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Mockito
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mockito_1/" title="기초" class="md-nav__link">
+      기초
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -849,8 +903,44 @@
 
 
   <li class="md-nav__item">
+    <a href="../../effjava/stream/" title="Stream" class="md-nav__link">
+      Stream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../effjava/aggregate/" title="Aggregate" class="md-nav__link">
+      Aggregate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../effjava/lambda/" title="Lambda" class="md-nav__link">
       Lambda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../effjava/optional/" title="Optional" class="md-nav__link">
+      Optional
     </a>
   </li>
 
@@ -1190,8 +1280,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#junit5" class="md-nav__link">
-    JUnit5 예제
+  <a href="#approval-test" class="md-nav__link">
+    Approval Test
   </a>
   
 </li>
@@ -1212,9 +1302,51 @@
                   
                 
                 
-                  <h1>Lab</h1>
+                  <h1>AporovalTest</h1>
                 
-                <h2 id="junit5">JUnit5 예제<a class="headerlink" href="#junit5" title="Permanent link">&para;</a></h2>
+                <h2 id="approval-test">Approval Test<a class="headerlink" href="#approval-test" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Maven</strong> 의 dependency</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
+            <span class="nt">&lt;groupId&gt;</span>com.approvaltests<span class="nt">&lt;/groupId&gt;</span>
+            <span class="nt">&lt;artifactId&gt;</span>approvaltests<span class="nt">&lt;/artifactId&gt;</span>
+            <span class="nt">&lt;version&gt;</span>9.5.0<span class="nt">&lt;/version&gt;</span>
+        <span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div>
+
+<ul>
+<li><code>import org.approvaltests.Approvals</code> </li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">org.approvaltests.Approvals</span><span class="p">;</span>
+<span class="kn">import</span> <span class="nn">org.junit.jupiter.api.Test</span><span class="p">;</span>
+
+<span class="kn">import static</span> <span class="nn">org.junit.jupiter.api.Assertions.assertEquals</span><span class="p">;</span>
+
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">SampleTests</span>
+<span class="p">{</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testNormalJunit</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">assertEquals</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testWithApprovalTests</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Approvals</span><span class="p">.</span><span class="na">verify</span><span class="p">(</span><span class="s">&quot;Hello World&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="cm">/**</span>
+<span class="cm">     *  note: this requires GSON which is currently added in the pom.xml file.</span>
+<span class="cm">     *  This is only required if you want to use the VerifyAsJson.</span>
+<span class="cm">     **/</span>
+    <span class="nd">@Test</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">testJson</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="n">Person</span> <span class="n">hero</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Person</span><span class="p">(</span><span class="s">&quot;jayne&quot;</span><span class="p">,</span> <span class="s">&quot;cobb&quot;</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="mi">38</span><span class="p">);</span>
+        <span class="n">Approvals</span><span class="p">.</span><span class="na">verifyAsJson</span><span class="p">(</span><span class="n">hero</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
@@ -1248,13 +1380,13 @@
           </a>
         
         
-          <a href="../../effcpp/01_mingw/" title="MinGW" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../hamcrest/" title="Hamcrest" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MinGW
+                Hamcrest
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

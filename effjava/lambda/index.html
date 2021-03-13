@@ -568,9 +568,63 @@
 
 
   <li class="md-nav__item">
-    <a href="../../tdd/junit5_03/" title="Lab" class="md-nav__link">
-      Lab
+    <a href="../../tdd/junit5_03/" title="AporovalTest" class="md-nav__link">
+      AporovalTest
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tdd/hamcrest/" title="Hamcrest" class="md-nav__link">
+      Hamcrest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-5" type="checkbox" id="nav-3-3-5">
+    
+    <label class="md-nav__link" for="nav-3-3-5">
+      Mockito
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Mockito" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Mockito
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../tdd/mockito_1/" title="기초" class="md-nav__link">
+      기초
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
         
@@ -807,6 +861,30 @@
           
           
 
+
+  <li class="md-nav__item">
+    <a href="../stream/" title="Stream" class="md-nav__link">
+      Stream
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aggregate/" title="Aggregate" class="md-nav__link">
+      Aggregate
+    </a>
+  </li>
+
+        
+          
+          
+          
+
   
 
 
@@ -944,6 +1022,18 @@
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../optional/" title="Optional" class="md-nav__link">
+      Optional
+    </a>
   </li>
 
         
@@ -1518,10 +1608,10 @@
 </code></pre></div>
 <strong>return</strong> 문은 수식이 아니므로 반드시 중괄호 <strong>{}</strong> 를 사용해야 한다.</p>
 <ul>
-<li>람다 수식은 메소드 선언처럼 보일 수 있다. 담다 수식을 이름이 없는 <strong>익명 메소드</strong> 로 간주해도 된다. </li>
+<li>람다 수식은 메소드 선언처럼 보일 수 있다. 람다 수식을 이름이 없는 <strong>익명 메소드</strong> 로 간주해도 된다. </li>
 <li>다음 예는 하나 이상의 파라미터를 가지는 람다 수식에 대한 예이다.</li>
 </ul>
-<p><div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Calculator</span> <span class="p">{</span>
 
     <span class="kd">interface</span> <span class="nc">IntegerMath</span> <span class="p">{</span>
         <span class="kt">int</span> <span class="nf">operation</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">);</span>   
@@ -1543,8 +1633,11 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-- <code>operateBinary()</code> 메소드는 2개 정수 피연산자에 대한 연산을 수행한다. 실제 연산은 <strong>IntegerMath</strong> 의 인스턴스로 기술된다.
-- <strong>addition</strong> 과 <strong>substraction</strong> 람다 수식을 가지는 2개의 연산을 정의한다. </p>
+
+<ul>
+<li><code>operateBinary()</code> 메소드는 2개 정수 피연산자에 대한 연산을 수행한다. 실제 연산은 <strong>IntegerMath</strong> 의 인스턴스로 기술된다.</li>
+<li><strong>addition</strong> 과 <strong>substraction</strong> 람다 수식을 가지는 2개의 연산을 정의한다. </li>
+</ul>
 <div class="highlight"><pre><span></span><code><span class="go">40 + 2 = 42</span>
 <span class="go">20 - 10 = </span>
 </code></pre></div>
@@ -1569,7 +1662,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../annotation/" title="Annotations" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../aggregate/" title="Aggregate" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1578,19 +1671,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Annotations
+                Aggregate
               </div>
             </div>
           </a>
         
         
-          <a href="../module/" title="Module" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../optional/" title="Optional" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Module
+                Optional
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
